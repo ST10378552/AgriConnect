@@ -50,33 +50,33 @@
 
                     <hr class="my-4">
 
-                    <section>
-                        <h5 class="text-center mb-3">Or use another service to log in</h5>
-                        <div class="d-flex justify-content-center">
-                            @{
-                                if ((Model.ExternalLogins?.Count ?? 0) == 0)
-                                {
-                                    <div>
-                                        <p class="text-muted small">
-                                            There are no external authentication services configured. 
-                                            See this <a href="https://go.microsoft.com/fwlink/?LinkID=532715 " class="text-success fw-bold">article</a> about setting up external login.
-                                        </p>
-                                    </div>
-                                }
-                                else
-                                {
-                                    <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form-horizontal">
-                                        <p>
-                                            @foreach (var provider in Model.ExternalLogins!)
-                                            {
-                                                <button type="submit" class="btn btn-outline-success btn-lg me-2" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
-                                            }
-                                        </p>
-                                    </form>
-                                }
-                            }
-                        </div>
-                    </section>
+                    @* <section> *@
+                    @*     <h5 class="text-center mb-3">Or use another service to log in</h5> *@
+                    @*     <div class="d-flex justify-content-center"> *@
+                    @*         @{ *@
+                    @*             if ((Model.ExternalLogins?.Count ?? 0) == 0) *@
+                    @*             { *@
+                    @*                 <div> *@
+                    @*                     <p class="text-muted small"> *@
+                    @*                         There are no external authentication services configured.  *@
+                    @*                         See this <a href="https://go.microsoft.com/fwlink/?LinkID=532715 " class="text-success fw-bold">article</a> about setting up external login. *@
+                    @*                     </p> *@
+                    @*                 </div> *@
+                    @*             } *@
+                    @*             else *@
+                    @*             { *@
+                    @*                 <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form-horizontal"> *@
+                    @*                     <p> *@
+                    @*                         @foreach (var provider in Model.ExternalLogins!) *@
+                    @*                         { *@
+                    @*                             <button type="submit" class="btn btn-outline-success btn-lg me-2" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button> *@
+                    @*                         } *@
+                    @*                     </p> *@
+                    @*                 </form> *@
+                    @*             } *@
+                    @*         } *@
+                    @*     </div> *@
+                    @* </section> *@
 
                     <hr class="my-4">
 
