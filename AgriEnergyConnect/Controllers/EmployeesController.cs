@@ -117,4 +117,5 @@ namespace AgriEnergyConnect.Controllers
             return RedirectToAction(nameof(Index));
         }
     }
+//Robert, S.,2023.model-view-controller(MVC).[online] Available at:https://www.techtarget.com/whatis/definition/model-view-controller-MVC [Accessed 10 May 2025]
 }
