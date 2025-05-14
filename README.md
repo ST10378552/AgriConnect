@@ -6,18 +6,32 @@
   ![C#](https://img.shields.io/badge/C%23-13.0-purple?style=for-the-badge&logo=csharp)
   ![SQL Server](https://img.shields.io/badge/SQL%20Server-2019-red?style=for-the-badge&logo=microsoftsqlserver)
   ![Bootstrap](https://img.shields.io/badge/Bootstrap-5.0-blueviolet?style=for-the-badge&logo=bootstrap)
-</div> <h3 align="center">Sustainable Agriculture Meets Green Energy</h3> <p align="center">A modern ASP.NET Core MVC platform connecting farmers with renewable energy solutions and peer-to-peer product purchasing.</p>
 
-🧾 Project Overview
-Agri-Energy Connect is a full-stack web application designed to empower farmers by:
+<div align="center">
 
-Enabling eco-friendly trade
+Sustainable Agriculture Meets Green Energy
+A modern ASP.NET Core MVC platform connecting farmers with renewable energy solutions and peer-to-peer product purchasing
 
-Promoting clean energy education
+</div>
+📋 Project Overview
+Agri-Energy Connect is a comprehensive full-stack web application designed to empower the agricultural community through sustainable practices and renewable energy adoption. Our platform serves as a bridge between traditional farming and modern green energy solutions.
 
-Providing a secure, role-based platform for collaboration
+🌱 Core Features
 
-🔧 Built with ASP.NET Core MVC, EF Core, and SQL Server, it supports scalable architecture and robust backend operations.
+Eco-Friendly Marketplace - Direct farmer-to-consumer sales platform reducing carbon footprint
+Renewable Energy Integration - Connection to green energy providers and solutions
+Knowledge Hub - Educational resources on sustainable farming practices
+Community Collaboration - Forums for sharing experiences and best practices
+Role-Based Access - Customized experiences for farmers, consumers, and energy providers
+
+🛠️ Technologies Used
+ASP.NET Core MVC — Modern backend web framework
+
+Entity Framework Core — ORM for interacting with SQL Server
+
+SQL Server 2019 — Reliable, scalable relational database
+
+Bootstrap 5 — Responsive and mobile-friendly front-end framework
 
 👥 User Roles & Capabilities
 #### 🧑‍🌾 **Farmer**
