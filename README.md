@@ -112,12 +112,15 @@ Loaded dynamically via standard CRUD operations – no seeding script needed.
 📄 Requests: Simulated upon product browsing/interaction
 
 ⚠️ Known Challenges & Fixes
+
 Issue	Solution
+
 🔒 Identity Injection	Used User.Identity.Name instead of injecting UserManager<IdentityUser>
 🔁 Redirect Errors	Fixed using RedirectToAction() to maintain routing structure
 📱 UI on Smaller Screens	Resolved with Bootstrap media queries and col-* classes
 
 🔄 UI/UX Refinements
+
 ✅ Switched from table layout to card-based format
 
 ✅ Integrated request approval buttons directly into listings
@@ -127,58 +130,62 @@ Issue	Solution
 ✅ Improved layout using flexbox and Bootstrap utilities
 
 🛠️ Setup Instructions
+
 ✅ Prerequisites
-.NET 9.0 SDK
 
-Visual Studio 2022
+➤ .NET 9.0 SDK
 
-SQL Server Express
+➤ Visual Studio 2022
 
-SQL Server Management Studio
+➤ SQL Server Express
+
+➤ SQL Server Management Studio
 
 📥 1. Clone the Repository
+
 bash
 
-git clone https://github.com/ST10378552/AgriConnect.git
-cd AgriConnect
-🛠️ 2. Configure the Database
-Open SQL Server Management Studio
+➤ git clone https://github.com/ST10378552/AgriConnect.git
 
-Create a new database:
+➤ cd AgriConnect
+
+🛠️ 2. Configure the Database
+
+1. Open SQL Server Management Studio
+
+2. Create a new database:
+
 ➤ Name: Agriculture Energy
 
-Update your appsettings.json:
+3. Update your appsettings.json:
 
-json
-
+➤ json
 "ConnectionStrings": {
   "DefaultConnection": "Server=DEVESH\\SQLEXPRESS;Database=Agriculture Energy;Trusted_Connection=True;MultipleActiveResultSets=true"
 }
+
 📦 3. Apply Migrations
+
 Via Visual Studio (Package Manager Console):
 
-powershell
-Copy
-Edit
-Add-Migration InitialCreate
-Update-Database
-Or using CLI:
+➤ powershell
+    Add-Migration InitialCreate
+    Update-Database
 
-bash
-
-dotnet ef migrations add InitialCreate
-dotnet ef database update
 ▶️ 4. Run the App
+
 In Visual Studio:
 
-Open the .sln file
+1. Open the .sln file
 
-Press F5 to build and launch
+2. Press F5 to build and launch
 
-App runs at: https://localhost:7029/
+3. App runs at: https://localhost:7029/
 
 🔍 Test the Application
+
 👩‍🌾 Farmer
+
 📨 Email: Kate@gmail.com
 
 🔐 Password: Kate@123
@@ -186,6 +193,7 @@ App runs at: https://localhost:7029/
 📦 Browse Products: https://localhost:7029/Purchase/Browse
 
 👨‍💼 Employee
+
 📨 Email: Jones@gmail.com
 
 🔐 Password: Jones@123
@@ -194,6 +202,7 @@ App runs at: https://localhost:7029/
 📦 Manage Products: https://localhost:7029/Products/Index
 
 🧱 Development Workflow
+
 Controllers/: Handle routing and logic
 
 Models/: Define database schema and relationships
@@ -207,9 +216,11 @@ wwwroot/: Static assets (Bootstrap, JS, CSS, Icons)
 ➕ Add New Features
 bash
 
-dotnet ef migrations add NewFeatureX
-dotnet ef database update
+➤ Add-Migration Best
+➤ Update-Database
+
 📄 License
+
 This project is licensed under the MIT License.
 See the LICENSE file for more details.
 
@@ -219,4 +230,5 @@ See the LICENSE file for more details.
 🐙 GitHub: ST10378552/AgriConnect
 
 🙌 Thank You!
+
 Thanks for exploring Agri-Energy Connect — a mission-driven platform uniting agriculture and clean energy for a better future. 🌿🔋
