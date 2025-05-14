@@ -20,63 +20,68 @@ Providing a secure, role-based platform for collaboration
 🔧 Built with ASP.NET Core MVC, EF Core, and SQL Server, it supports scalable architecture and robust backend operations.
 
 👥 User Roles & Capabilities
+
 🧑‍🌾 Farmer
-📝 Register and manage personal profile
 
-📦 Add/edit/delete agricultural products
+  📝 Register and manage personal profile
 
-🛒 Browse other listings and send purchase requests
+  📦 Add/edit/delete agricultural products
 
-✅ View and approve incoming purchase requests
+  🛒 Browse other listings and send purchase requests
 
-💬 Participate in discussion forums
+  ✅ View and approve incoming purchase requests
 
-📚 Access educational green energy content
+  💬 Participate in discussion forums
+
+  📚 Access educational green energy content
 
 👩‍💼 Employee (Administrator)
 
-👤 Manage farmer accounts and product listings
+  👤 Manage farmer accounts and product listings
 
-📊 View system-wide data and analytics
+  📊 View system-wide data and analytics
 
-📂 Moderate educational content and posts
+  📂 Moderate educational content and posts
 
-🔐 Login Credentials (For Testing)
-Role	Email	Password
-Farmer	Kate@gmail.com	Kate@123
-Employee	Jones@gmail.com	Jones@123
+  🔐 Login Credentials (For Testing)
+
+| **Role**     | **Email**         | **Password**|
+|--------------|-------------------|-------------|
+| **Farmer**   | Kate@gmail.com    | Kate@123    |
+| **Employee** | Jones@gmail.com   | Jones@123    
+
 
 🚀 Key Features
 
 Feature	Description
 
-✅ Registration & Login	Secure role-based authentication using ASP.NET Identity
+  ✅ Registration & Login	Secure role-based authentication using ASP.NET Identity
 
-✅ Product CRUD	Farmers can manage their own listings
+  ✅ Product CRUD	Farmers can manage their own listings
 
-✅ Purchase Request System	Send, receive, and approve product purchase requests
+  ✅ Purchase Request System	Send, receive, and approve product purchase requests
 
-✅ Chat Forum	Community-style discussion board for farmers
+  ✅ Chat Forum	Community-style discussion board for farmers
 
-✅ Green Energy Learning Hub	Access to curated educational resources (courses, webinars, guides)
+  ✅ Green Energy Learning Hub	Access to curated educational resources (courses, webinars, guides)
 
-✅ Responsive UI Design	Built with Bootstrap 5 and mobile-friendly grid layout
+  ✅ Responsive UI Design	Built with Bootstrap 5 and mobile-friendly grid layout
 
-✅ Profile Management	Users can update their own information with validation
+  ✅ Profile Management	Users can update their own information with validation
 
-✅ Integrated SQL Server DB	Automatic CRUD-based sample data generation without manual seeding
+  ✅ Integrated SQL Server DB	Automatic CRUD-based sample data generation without manual seeding
 
 🎨 UI Design Highlights
 
-🟩 Card-Based Layout with d-flex and flex-wrap for responsiveness
+  💎 Card-Based Layout with d-flex and flex-wrap for responsiveness
 
-🌀 Hover Effects to improve user interaction feedback
+  💎 Hover Effects to improve user interaction feedback
 
-✅ Green Theme to reflect eco/sustainability branding
+  💎 Green Theme to reflect eco/sustainability branding
 
-📝 Clear Form Validations using Bootstrap and Razor Tag Helpers
+  💎 Clear Form Validations using Bootstrap and Razor Tag Helpers
 
-💎 Modern Typography: Segoe UI + Poppins
+  💎 Modern Typography: Segoe UI + Poppins
 
 🔧 Icon Fixes: Resolved with updated Font Awesome CDN
 
@@ -129,41 +134,41 @@ Loaded dynamically via standard CRUD operations – no seeding script needed.
 
 * Issue	Solution * 
 
-🔒 Identity Injection	Used User.Identity.Name instead of injecting UserManager<IdentityUser>
+   🔒 Identity Injection	Used User.Identity.Name instead of injecting UserManager<IdentityUser>
 
-🔁 Redirect Errors	Fixed using RedirectToAction() to maintain routing structure
+   🔁 Redirect Errors	Fixed using RedirectToAction() to maintain routing structure
 
-📱 UI on Smaller Screens	Resolved with Bootstrap media queries and col-* classes
+   📱 UI on Smaller Screens	Resolved with Bootstrap media queries and col-* classes
 
 🔄 UI/UX Refinements
 
-✅ Switched from table layout to card-based format
+   ✅ Switched from table layout to card-based format
 
-✅ Integrated request approval buttons directly into listings
+   ✅ Integrated request approval buttons directly into listings
 
-✅ Added dropdown menu for authenticated user profile actions
+   ✅ Added dropdown menu for authenticated user profile actions
 
-✅ Improved layout using flexbox and Bootstrap utilities
+   ✅ Improved layout using flexbox and Bootstrap utilities
 
 🛠️ Setup Instructions
 
 ✅ Prerequisites
 
-➤ .NET 9.0 SDK
+    ➤ .NET 9.0 SDK
 
-➤ Visual Studio 2022
+    ➤ Visual Studio 2022
 
-➤ SQL Server Express
+    ➤ SQL Server Express
 
-➤ SQL Server Management Studio
+    ➤ SQL Server Management Studio
 
-📥 1. Clone the Repository
+1. 📥 Clone the Repository
 
 bash
 
-➤ git clone https://github.com/ST10378552/AgriConnect.git
+  ➤ git clone https://github.com/ST10378552/AgriConnect.git
 
-➤ cd AgriConnect
+  ➤ cd AgriConnect
 
 🛠️ 2. Configure the Database
 
@@ -185,18 +190,20 @@ bash
 Via Visual Studio (Package Manager Console):
 
 ➤ powershell
+
     Add-Migration InitialCreate
+    
     Update-Database
 
 ▶️ 4. Run the App
 
 In Visual Studio:
 
-1. Open the .sln file
+  1. Open the .sln file
 
-2. Press F5 to build and launch
+  2. Press F5 to build and launch
 
-3. App runs at: https://localhost:7029/
+  3. App runs at: https://localhost:7029/
 
 🔍 Test the Application
 
@@ -219,21 +226,23 @@ In Visual Studio:
 
 🧱 Development Workflow
 
-Controllers/: Handle routing and logic
+    ➤ Controllers/: Handle routing and logic
 
-Models/: Define database schema and relationships
+    ➤ Models/: Define database schema and relationships
 
-Views/: Razor Pages (organized per controller)
+    ➤ Views/: Razor Pages (organized per controller)
 
-Data/: EF Core context and migrations
+    ➤ Data/: EF Core context and migrations
 
 wwwroot/: Static assets (Bootstrap, JS, CSS, Icons)
 
 ➕ Add New Features
+
 bash
 
-➤ Add-Migration Best
-➤ Update-Database
+    ➤ Add-Migration Best (This is the Migration Name) 
+
+    ➤ Update-Database
 
 📄 License
 
@@ -241,6 +250,7 @@ This project is licensed under the MIT License.
 See the LICENSE file for more details.
 
 📞 Contact
+
 📧 Email: naidoodevesh32@gmail.com
 
 🐙 GitHub: ST10378552/AgriConnect
