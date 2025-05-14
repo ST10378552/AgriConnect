@@ -1,6 +1,7 @@
-# 🌱 Agri-Energy Connect 🔋
-
 <div align="center">
+  # 🌱 Agri-Energy Connect 🔋
+</div>
+
   
   ![ASP.NET Core](https://img.shields.io/badge/ASP.NET%20Core-9.0-blue?style=for-the-badge&logo=dotnet)
   ![C#](https://img.shields.io/badge/C%23-13.0-purple?style=for-the-badge&logo=csharp)
