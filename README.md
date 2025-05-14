@@ -132,18 +132,38 @@ Built with:
 ```
 
 
-🧪 Sample Data
-Loaded dynamically via standard CRUD operations – no seeding script needed.
+## 🧪 Sample Data
 
-👩‍🌾 Farmers: Kate@gmail.com, Dev@gmail.com
+Loaded dynamically via standard CRUD operations — no seeding script needed.
 
-🛍️ Products: Organic Tomatoes, Free-Range Eggs
+- 👩‍🌾 **Farmers**:  
+  - Kate@gmail.com  
+  - Dev@gmail.com
 
-💬 Chat Posts: Stored in ChatMessages table
+- 🛍️ **Products**:  
+  - Organic Tomatoes  
+  - Free-Range Eggs
 
-📄 Requests: Simulated upon product browsing/interaction
+- 💬 **Chat Posts**:  
+  Stored in the `ChatMessages` table
 
-⚠️ Known Challenges & Fixes
+- 📄 **Requests**:  
+  Simulated during product browsing and interaction
+
+
+---
+
+## ⚠️ Known Challenges & Fixes
+
+- 🔒 **Identity Injection**  
+  - Solution: Used `User.Identity.Name` instead of injecting `UserManager<IdentityUser>`
+
+- 🔁 **Redirect Errors**  
+  - Solution: Fixed using `RedirectToAction()` to maintain routing structure
+
+- 📱 **UI on Smaller Screens**  
+  - Solution: Resolved with Bootstrap media queries and `col-*` classes for responsive layout
+
 
 ### ⚠️ Known Challenges & Fixes
 
