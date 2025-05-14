@@ -255,27 +255,35 @@ Via Visual Studio (Package Manager Console):
 
     ➤ Data/: EF Core context and migrations
 
-wwwroot/: Static assets (Bootstrap, JS, CSS, Icons)
+---
 
-➕ Add New Features
+## wwwroot/: Static assets (Bootstrap, JS, CSS, Icons)
 
-bash
+---
 
-    ➤ Add-Migration Best (This is the Migration Name) 
+## ➕ Add New Features
 
-    ➤ Update-Database
+Via Visual Studio (Package Manager Console):
 
-📄 License
+- ➤ `Add-Migration Best` (This is the Migration Name)
+- ➤ `Update-Database`
 
-This project is licensed under the MIT License.
-See the LICENSE file for more details.
+---
 
-📞 Contact
+## 📄 License
 
-📧 Email: naidoodevesh32@gmail.com
+This project is licensed under the **MIT License**.  
+See the `LICENSE` file for more details.
 
-🐙 GitHub: ST10378552/AgriConnect
+---
 
-🙌 Thank You!
+## 📞 Contact
 
-Thanks for exploring Agri-Energy Connect — a mission-driven platform uniting agriculture and clean energy for a better future. 🌿🔋
+- 📧 Email: `naidoodevesh32@gmail.com`
+- 🐙 GitHub: [ST10378552/AgriConnect](https://github.com/ST10378552/AgriConnect)
+
+---
+
+## 🙌 Thank You!
+
+Thanks for exploring **Agri-Energy Connect** — a mission-driven platform uniting agriculture and clean energy for a better future. 🌿🔋
