@@ -20,26 +20,18 @@ Providing a secure, role-based platform for collaboration
 🔧 Built with ASP.NET Core MVC, EF Core, and SQL Server, it supports scalable architecture and robust backend operations.
 
 👥 User Roles & Capabilities
-🧑‍🌾 Farmer
-    * Register and manage personal profile *
+#### 🧑‍🌾 **Farmer**
+- 📝 **Register and manage personal profile**
+- 📦 **Add/edit/delete agricultural products**
+- 🛒 **Browse other listings and send purchase requests**
+- ✅ **View and approve incoming purchase requests**
+- 💬 **Participate in discussion forums**
+- 📚 **Access educational green energy content**
 
-    * Add/edit/delete agricultural products *
-
-    * Browse other listings and send purchase requests *
-
-    * View and approve incoming purchase requests *
-
-    * Participate in discussion forums *
-
-    * Access educational green energy content * 
-
-👩‍💼 Employee (Administrator)
-
-    * Manage farmer accounts and product listings *
-
-    * View system-wide data and analytics *
-
-    * Moderate educational content and posts *
+#### 👩‍💼 **Employee (Administrator)**
+- 👤 **Manage farmer accounts and product listings**
+- 📊 **View system-wide data and analytics**
+- 📂 **Moderate educational content and posts**
 
 
 
