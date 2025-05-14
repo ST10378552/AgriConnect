@@ -29,6 +29,7 @@ View analytics and system-wide data
 Built with ASP.NET Core MVC, Entity Framework Core, and SQL Server, this platform ensures scalability and robust backend operations.
 
 🚀 Key Features
+
 ✅ Farmer Registration & Profile Management
 
 ✅ Product Listing & CRUD Operations
@@ -73,23 +74,23 @@ Access system-wide analytics
 
 🔑 Example Employee Login:
 
-graphql
-Copy
-Edit
 Email: Jones@gmail.com  
+
 Password: Jones@123
+
 💻 Technology Stack
+
 Layer	Technologies Used
-Frontend	HTML5, CSS3, JavaScript, Bootstrap 5
-Backend	ASP.NET Core MVC, C#, Entity Framework Core
-Database	Microsoft SQL Server (Agriculture Energy)
-Authentication	ASP.NET Identity UI
-Icons & Fonts	Font Awesome, Google Fonts (Segoe UI, Poppins)
+
+- Frontend	HTML5, CSS3, JavaScript, Bootstrap 5
+- Backend	ASP.NET Core MVC, C#, Entity Framework Core
+- Database	Microsoft SQL Server (Agriculture Energy)
+- Authentication	ASP.NET Identity UI
+- Authentication	ASP.NET Identity UI
+
 
 📁 Folder Structure
-markdown
-Copy
-Edit
+
 /Controllers
   - FarmersController.cs
   - ProductsController.cs
@@ -131,64 +132,80 @@ Purchase Requests: Auto-generated
 Sample data is loaded automatically via CRUD logic (no seeding script required).
 
 🎮 Feature Demonstration
+
 Feature	Description
+
 ✅ Registration/Login	Secure user authentication using ASP.NET Identity
+
 ✅ Product Browsing	Filter products by name, email, or category
+
 ✅ Purchase Requests	Farmers can request to purchase; product owners can approve via UI
+
 ✅ Chat Forum	Interactive discussion forum; messages stored in the ChatMessages table
+
 ✅ Educational Resources	Access online courses, webinars, guides, and video tutorials
+
 ✅ Profile Management	Farmers can update their profile via a top-right dropdown menu
 
+
 🎨 UI Design Highlights
-Consistent card-based layout with responsive Bootstrap grid (col-md-*, d-flex, flex-wrap)
 
-Hover animations for interactivity
+- Consistent card-based layout with responsive Bootstrap grid (col-md-*, d-flex, flex-wrap)
 
-Green-themed UI for eco/success actions
+- Hover animations for interactivity
 
-Clear validation feedback on forms
+- Green-themed UI for eco/success actions
 
-Typography using Segoe UI and Poppins
+- Clear validation feedback on forms
 
-Fixed broken icons by correcting Font Awesome CDN URL:
+- Typography using Segoe UI and Poppins
 
-html
-Copy
-Edit
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+- Fixed broken icons by correcting Font Awesome CDN URL:
+
+- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
 ⚠️ Challenges and Changes
+
 🛠️ Technical Issues
+
 Issue	Solution
-Identity injection issue	Used User.Identity.Name instead of injecting UserManager<IdentityUser>
-Redirection errors	Solved using RedirectToAction() to ensure proper routing
-UI issues on smaller screens	Fixed with responsive Bootstrap classes and layouts
+
+- Identity injection issue	Used User.Identity.Name instead of injecting UserManager<IdentityUser>
+- Redirection errors	Solved using RedirectToAction() to ensure proper routing
+- UI issues on smaller screens	Fixed with responsive Bootstrap classes and layouts
 
 🔄 Design Improvements
-Switched from table layout to card-based UI
 
-Integrated purchase request approval directly in the UI
+- Switched from table layout to card-based UI
 
-Created a fully functional navigation bar with icons
+- Integrated purchase request approval directly in the UI
 
-Improved mobile usability with responsive design
+- Created a fully functional navigation bar with icons
+
+- Improved mobile usability with responsive design
 
 🛠️ Setup Instructions
+
 ✅ Prerequisites
-.NET SDK 9.0+
 
-Visual Studio 2022 or Visual Studio Code
+1. .NET SDK 9.0+
 
-SQL Server Express
+2. Visual Studio 2022 or Visual Studio Code
 
-SQL Server Management Studio
+3. SQL Server Express
+
+4. SQL Server Management Studio
 
 📥 1. Clone the Repository
+
 bash
-Copy
-Edit
+
 git clone https://github.com/ST10378552/AgriConnect.git
+
 cd AgriConnect
+
 🛠️ 2. Configure the Database
+
 Open SQL Server Management Studio
 
 Create a new database named: Agriculture Energy
@@ -196,44 +213,35 @@ Create a new database named: Agriculture Energy
 Update appsettings.json with this connection string:
 
 json
-Copy
-Edit
+
 "ConnectionStrings": {
   "DefaultConnection": "Server=DEVESH\\SQLEXPRESS;Database=Agriculture Energy;Trusted_Connection=True;MultipleActiveResultSets=true"
 }
+
 📦 3. Apply Migrations
+
 Using Package Manager Console in Visual Studio:
 
 powershell
-Copy
-Edit
-Add-Migration InitialCreate
-Update-Database
-Or using .NET CLI:
 
-bash
-Copy
-Edit
-dotnet ef migrations add InitialCreate
-dotnet ef database update
+Add-Migration InitialCreate
+
+Update-Database
+
 ▶️ 4. Run the Application
+
 In Visual Studio:
 
 Open the .sln file
 
 Press F5 to build and run
 
-Using Command Line:
-
-bash
-Copy
-Edit
-dotnet build
-dotnet run
 App will be available at: https://localhost:7029/
 
 🧪 Test the App
+
 👩‍🌾 Farmer
+
 Login: Kate@gmail.com
 
 Password: Kate@123
@@ -262,18 +270,22 @@ wwwroot/: Static files (CSS, JS, images)
 
 ➕ Add New Features
 bash
-Copy
-Edit
-dotnet ef migrations add NewFeatureMigration
-dotnet ef database update
+
+Add-Migration Best
+
+Update-Database
+
 📄 License
+
 This project is licensed under the MIT License. See the LICENSE file for more details.
 
 📞 Contact
+
 📧 Email: naidoodevesh32@gmail.com
 
 🐱 GitHub: ST10378552/AgriConnect
 
 🙌 Thank You!
+
 Thanks for exploring Agri-Energy Connect — a platform empowering farmers through technology, clean energy, and sustainable practices. 🌿🔋
 
