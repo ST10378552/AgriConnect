@@ -60,7 +60,7 @@ Built with ASP.NET Core MVC, Entity Framework Core, and SQL Server, this platfor
 
 4. Request to purchase
 
-View/approve incoming purchase requests
+5. View/approve incoming purchase requests
 
 🔑 Example Farmer Login:
 
@@ -120,8 +120,10 @@ Layer	Technologies Used
 
 /wwwroot
   (Static assets: CSS, JS, images)
+  
 📦 Database Usage
-Database Name: Agriculture Energy
+
+Database Name: AgricultureEnergy
 
 Preloaded Sample Data:
 
