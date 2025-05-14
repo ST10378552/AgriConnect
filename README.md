@@ -26,8 +26,10 @@ Built with:
 - 🗄️ **SQL Server** — for robust and reliable data storage  
 - 🎨 **Bootstrap 5** — for responsive, mobile-friendly UI design
 
+---
 
-👥 User Roles & Capabilities
+👥 **User Roles & Capabilities**
+
 #### 🧑‍🌾 **Farmer**
 - 📝 **Register and manage personal profile**
 - 📦 **Add/edit/delete agricultural products**
@@ -40,7 +42,6 @@ Built with:
 - 👤 **Manage farmer accounts and product listings**
 - 📊 **View system-wide data and analytics**
 - 📂 **Moderate educational content and posts**
-
 
 
 🔐 Login Credentials (For Testing)
