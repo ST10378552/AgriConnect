@@ -165,14 +165,7 @@ Loaded dynamically via standard CRUD operations — no seeding script needed.
   - Solution: Resolved with Bootstrap media queries and `col-*` classes for responsive layout
 
 
-### ⚠️ Known Challenges & Fixes
-
-- 🔒 **Identity Injection** — Used `User.Identity.Name` instead of injecting `UserManager<IdentityUser>`
-- 🔁 **Redirect Errors** — Fixed using `RedirectToAction()` to maintain routing structure
-- 📱 **UI on Smaller Screens** — Resolved with Bootstrap media queries and `col-*` classes
-
-
-### 🔄 UI/UX Refinements
+## 🔄 UI/UX Refinements
 
 - ✅ **Switched from table layout to card-based format**
 - ✅ **Integrated request approval buttons directly into listings**
@@ -192,64 +185,63 @@ Loaded dynamically via standard CRUD operations — no seeding script needed.
 
     ➤ SQL Server Management Studio
 
-1. 📥 Clone the Repository
+## 1. 📥 Clone the Repository
 
 Open your terminal and run the following commands:
 
-  ➤ git clone https://github.com/ST10378552/AgriConnect.git
+- ➤ `git clone https://github.com/ST10378552/AgriConnect.git`
+- ➤ `cd AgriConnect`
 
-  ➤ cd AgriConnect
+---
 
-🛠️ 2. Configure the Database
+## 🛠️ 2. Configure the Database
 
-1. Open SQL Server Management Studio
+1. Open **SQL Server Management Studio**.
 
 2. Create a new database:
+   - ➤ Name: **Agriculture Energy**
 
-➤ Name: Agriculture Energy
+3. Update your `appsettings.json`:
 
-3. Update your appsettings.json:
-
-➤ json
+```json
 "ConnectionStrings": {
   "DefaultConnection": "Server=DEVESH\\SQLEXPRESS;Database=Agriculture Energy;Trusted_Connection=True;MultipleActiveResultSets=true"
 }
+```
 
-📦 3. Apply Migrations
+---
+
+## 📦 3. Apply Migrations
 
 Via Visual Studio (Package Manager Console):
 
-➤ powershell
+- ➤ `Add-Migration InitialCreate`
+- ➤ `Update-Database`
 
-    Add-Migration InitialCreate
-    
-    Update-Database
+---
 
+## ▶️ 4. Run the App in Visual Studio
 
-▶️ 4. Run the App in Visual Studio
-Open the AgriConnect.sln solution file in Visual Studio.
+- Open the `AgriConnect.sln` solution file in Visual Studio.
+- Press **F5** or click **Start Debugging** to build and launch the app.
+- The application will run at:
+  - 🔗 `https://localhost:7029/`
 
-Press F5 or click Start Debugging to build and launch the app.
+---
 
-The application will run at:
-🔗 https://localhost:7029/
+## 🔍 Test the Application
 
-🔍 Test the Application
-👩‍🌾 Farmer Account
-📧 Email: Kate@gmail.com
+### 👩‍🌾 **Farmer Account**
+- 📧 Email: `Kate@gmail.com`
+- 🔐 Password: `Kate@123`
+- 🛒 Browse Products: `https://localhost:7029/Purchase/Browse`
 
-🔐 Password: Kate@123
+### 👨‍💼 **Employee Account**
+- 📧 Email: `Jones@gmail.com`
+- 🔐 Password: `Jones@123`
+- 👥 Manage Farmers: `https://localhost:7029/Farmers/Index`
+- 📦 Manage Products: `https://localhost:7029/Products/Index`
 
-🛒 Browse Products: https://localhost:7029/Purchase/Browse
-
-👨‍💼 Employee Account
-📧 Email: Jones@gmail.com
-
-🔐 Password: Jones@123
-
-👥 Manage Farmers: https://localhost:7029/Farmers/Index
-
-📦 Manage Products: https://localhost:7029/Products/Index
 
 
 
