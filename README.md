@@ -131,15 +131,13 @@ Loaded dynamically via standard CRUD operations – no seeding script needed.
 - 📱 **UI on Smaller Screens** — Resolved with Bootstrap media queries and `col-*` classes
 
 
-🔄 UI/UX Refinements
+### 🔄 UI/UX Refinements
 
-   ✅ Switched from table layout to card-based format
+- ✅ **Switched from table layout to card-based format**
+- ✅ **Integrated request approval buttons directly into listings**
+- ✅ **Added dropdown menu for authenticated user profile actions**
+- ✅ **Improved layout using flexbox and Bootstrap utilities**
 
-   ✅ Integrated request approval buttons directly into listings
-
-   ✅ Added dropdown menu for authenticated user profile actions
-
-   ✅ Improved layout using flexbox and Bootstrap utilities
 
 🛠️ Setup Instructions
 
@@ -155,7 +153,7 @@ Loaded dynamically via standard CRUD operations – no seeding script needed.
 
 1. 📥 Clone the Repository
 
-bash
+Open your terminal and run the following commands:
 
   ➤ git clone https://github.com/ST10378552/AgriConnect.git
 
@@ -186,34 +184,33 @@ Via Visual Studio (Package Manager Console):
     
     Update-Database
 
-▶️ 4. Run the App
 
-In Visual Studio:
+▶️ 4. Run the App in Visual Studio
+Open the AgriConnect.sln solution file in Visual Studio.
 
-  1. Open the .sln file
+Press F5 or click Start Debugging to build and launch the app.
 
-  2. Press F5 to build and launch
-
-  3. App runs at: https://localhost:7029/
+The application will run at:
+🔗 https://localhost:7029/
 
 🔍 Test the Application
-
-👩‍🌾 Farmer
-
-📨 Email: Kate@gmail.com
+👩‍🌾 Farmer Account
+📧 Email: Kate@gmail.com
 
 🔐 Password: Kate@123
 
-📦 Browse Products: https://localhost:7029/Purchase/Browse
+🛒 Browse Products: https://localhost:7029/Purchase/Browse
 
-👨‍💼 Employee
-
-📨 Email: Jones@gmail.com
+👨‍💼 Employee Account
+📧 Email: Jones@gmail.com
 
 🔐 Password: Jones@123
 
-🧑‍🌾 Manage Farmers: https://localhost:7029/Farmers/Index
+👥 Manage Farmers: https://localhost:7029/Farmers/Index
+
 📦 Manage Products: https://localhost:7029/Products/Index
+
+
 
 🧱 Development Workflow
 
