@@ -1,14 +1,12 @@
 <div align="center">
   # 🌱 Agri-Energy Connect 🔋
-</div>
 
-  
   ![ASP.NET Core](https://img.shields.io/badge/ASP.NET%20Core-9.0-blue?style=for-the-badge&logo=dotnet)
   ![C#](https://img.shields.io/badge/C%23-13.0-purple?style=for-the-badge&logo=csharp)
   ![SQL Server](https://img.shields.io/badge/SQL%20Server-2019-red?style=for-the-badge&logo=microsoftsqlserver)
   ![Bootstrap](https://img.shields.io/badge/Bootstrap-5.0-blueviolet?style=for-the-badge&logo=bootstrap)
-
-</div> <h3 align="center">Sustainable Agriculture Meets Green Energy</h3> <p align="center">A modern ASP.NET Core MVC platform connecting farmers with renewable energy solutions and peer-to-peer product purchasing.</p>
+</div>
+<h3 align="center">Sustainable Agriculture Meets Green Energy</h3> <p align="center">A modern ASP.NET Core MVC platform connecting farmers with renewable energy solutions and peer-to-peer product purchasing.</p>
 
 ## 🧾 Project Overview
 
