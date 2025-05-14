@@ -7,31 +7,27 @@
   ![SQL Server](https://img.shields.io/badge/SQL%20Server-2019-red?style=for-the-badge&logo=microsoftsqlserver)
   ![Bootstrap](https://img.shields.io/badge/Bootstrap-5.0-blueviolet?style=for-the-badge&logo=bootstrap)
 
-<div align="center">
+## 🌿 Sustainable Agriculture Meets Green Energy
 
-Sustainable Agriculture Meets Green Energy
-A modern ASP.NET Core MVC platform connecting farmers with renewable energy solutions and peer-to-peer product purchasing
+**Agri-Energy Connect** is a modern ASP.NET Core MVC platform that connects farmers with renewable energy solutions and supports peer-to-peer product purchasing.
 
-</div>
-📋 Project Overview
-Agri-Energy Connect is a comprehensive full-stack web application designed to empower the agricultural community through sustainable practices and renewable energy adoption. Our platform serves as a bridge between traditional farming and modern green energy solutions.
+---
 
-🌱 Core Features
+## 🧾 Project Overview
 
-Eco-Friendly Marketplace - Direct farmer-to-consumer sales platform reducing carbon footprint
-Renewable Energy Integration - Connection to green energy providers and solutions
-Knowledge Hub - Educational resources on sustainable farming practices
-Community Collaboration - Forums for sharing experiences and best practices
-Role-Based Access - Customized experiences for farmers, consumers, and energy providers
+Agri-Energy Connect is a **full-stack web application** designed to empower farmers by:
 
-🛠️ Technologies Used
-ASP.NET Core MVC — Modern backend web framework
+- ✅ Enabling **eco-friendly trade** between local producers and buyers  
+- 📚 Promoting **clean energy education** through curated content  
+- 🔐 Providing a **secure, role-based platform** for collaboration and commerce
 
-Entity Framework Core — ORM for interacting with SQL Server
+Built with:
 
-SQL Server 2019 — Reliable, scalable relational database
+- ⚙️ **ASP.NET Core MVC** — for scalable and structured web development  
+- 🧠 **Entity Framework Core** — to handle database interactions  
+- 🗄️ **SQL Server** — for robust and reliable data storage  
+- 🎨 **Bootstrap 5** — for responsive, mobile-friendly UI design
 
-Bootstrap 5 — Responsive and mobile-friendly front-end framework
 
 👥 User Roles & Capabilities
 #### 🧑‍🌾 **Farmer**
