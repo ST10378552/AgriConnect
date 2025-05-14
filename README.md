@@ -132,25 +132,25 @@ Sample data is loaded automatically via CRUD logic (no seeding script required).
 
 🎮 Feature Demonstration
 Feature	Description
-✅ Registration/Login	Uses ASP.NET Identity
-✅ Product Browsing	Filter by name/email/category
-✅ Purchase Requests	Requests logged and approved via UI
-✅ Chat Forum	Store messages in ChatMessages table
-✅ Educational Resources	Online courses, webinars, guides
-✅ Profile Management	Access via dropdown in navbar
+✅ Registration/Login	Secure user authentication using ASP.NET Identity
+✅ Product Browsing	Filter products by name, email, or category
+✅ Purchase Requests	Farmers can request to purchase; product owners can approve via UI
+✅ Chat Forum	Interactive discussion forum; messages stored in the ChatMessages table
+✅ Educational Resources	Access online courses, webinars, guides, and video tutorials
+✅ Profile Management	Farmers can update their profile via a top-right dropdown menu
 
 🎨 UI Design Highlights
-Responsive card-based layout with hover effects
+Consistent card-based layout with responsive Bootstrap grid (col-md-*, d-flex, flex-wrap)
 
-Mobile-first design using col-md-*, d-flex, and flex-wrap
+Hover animations for interactivity
 
-Consistent green theme for success actions
+Green-themed UI for eco/success actions
 
-Clear form validation
+Clear validation feedback on forms
 
-Easy-to-read fonts (Segoe UI, Poppins)
+Typography using Segoe UI and Poppins
 
-Icon CDN fix: Removed trailing space in Font Awesome URL
+Fixed broken icons by correcting Font Awesome CDN URL:
 
 html
 Copy
@@ -159,22 +159,24 @@ Edit
 ⚠️ Challenges and Changes
 🛠️ Technical Issues
 Issue	Solution
-Identity Dependency	Used User.Identity.Name instead
-Redirection Errors	Fixed with RedirectToAction()
-UI Broken on Small Screens	Resolved using Bootstrap grid & flex classes
+Identity injection issue	Used User.Identity.Name instead of injecting UserManager<IdentityUser>
+Redirection errors	Solved using RedirectToAction() to ensure proper routing
+UI issues on smaller screens	Fixed with responsive Bootstrap classes and layouts
 
-🔄 Design Changes
-Switched from table layouts to responsive card grids
+🔄 Design Improvements
+Switched from table layout to card-based UI
 
-Integrated request approval directly into UI
+Integrated purchase request approval directly in the UI
 
-Fully functional icon-enhanced navigation bar
+Created a fully functional navigation bar with icons
+
+Improved mobile usability with responsive design
 
 🛠️ Setup Instructions
 ✅ Prerequisites
 .NET SDK 9.0+
 
-Visual Studio 2022 or VS Code
+Visual Studio 2022 or Visual Studio Code
 
 SQL Server Express
 
@@ -189,82 +191,89 @@ cd AgriConnect
 🛠️ 2. Configure the Database
 Open SQL Server Management Studio
 
-Create a new database: Agriculture Energy
+Create a new database named: Agriculture Energy
 
-Update the connection string in appsettings.json:
+Update appsettings.json with this connection string:
 
 json
 Copy
 Edit
 "ConnectionStrings": {
-  "DefaultConnection": "Server=(localdb)\\MSSQLLocalDB;Database=Agriculture Energy;Trusted_Connection=True;MultipleActiveResultSets=true"
+  "DefaultConnection": "Server=DEVESH\\SQLEXPRESS;Database=Agriculture Energy;Trusted_Connection=True;MultipleActiveResultSets=true"
 }
 📦 3. Apply Migrations
-Using Package Manager Console:
+Using Package Manager Console in Visual Studio:
 
 powershell
 Copy
 Edit
 Add-Migration InitialCreate
 Update-Database
-Or via .NET CLI:
+Or using .NET CLI:
 
 bash
 Copy
 Edit
 dotnet ef migrations add InitialCreate
 dotnet ef database update
-▶️ 4. Run the App
+▶️ 4. Run the Application
 In Visual Studio:
 
 Open the .sln file
 
-Press F5 to run
+Press F5 to build and run
 
-Via Command Line:
+Using Command Line:
 
 bash
 Copy
 Edit
 dotnet build
 dotnet run
-App URL: https://localhost:7029/
+App will be available at: https://localhost:7029/
 
 🧪 Test the App
-👩‍🌾 Farmer:
-Login: Kate@gmail.com / Kate@123
+👩‍🌾 Farmer
+Login: Kate@gmail.com
 
-Browse products: /Purchase/Browse
+Password: Kate@123
 
-👨‍💼 Employee:
-Login: Jones@gmail.com / Jones@123
+Browse products: https://localhost:7029/Purchase/Browse
 
-Manage: /Farmers/Index, /Products/Index
+👨‍💼 Employee
+Login: Jones@gmail.com
+
+Password: Jones@123
+
+Manage farmers: https://localhost:7029/Farmers/Index
+
+Manage products: https://localhost:7029/Products/Index
 
 🧱 Development Workflow
-Controllers: Handle logic and routing
+Controllers/: Handle routing and logic
 
-Models: Entity and business logic
+Models/: Define entities and business logic
 
-Views: Razor views per controller
+Views/: Razor pages, grouped per controller
 
-Data: DB context and migrations
+Data/: ApplicationDbContext for EF Core and migrations
 
-wwwroot: All static assets
+wwwroot/: Static files (CSS, JS, images)
 
-➕ Add New Features:
+➕ Add New Features
 bash
 Copy
 Edit
 dotnet ef migrations add NewFeatureMigration
 dotnet ef database update
 📄 License
-MIT License – See LICENSE for details.
+This project is licensed under the MIT License. See the LICENSE file for more details.
 
 📞 Contact
 📧 Email: naidoodevesh32@gmail.com
+
 🐱 GitHub: ST10378552/AgriConnect
 
 🙌 Thank You!
-Thanks for exploring Agri-Energy Connect – empowering sustainable agriculture through technology, clean energy, and community.
+Thanks for exploring Agri-Energy Connect — a platform empowering farmers through technology, clean energy, and sustainable practices. 🌿🔋
 
