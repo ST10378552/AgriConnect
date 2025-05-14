@@ -35,7 +35,7 @@ Providing a secure, role-based platform for collaboration
 
 
 
-  🔐 Login Credentials (For Testing)
+🔐 Login Credentials (For Testing)
 
 | **Role**     | **Email**         | **Password**|
 |--------------|-------------------|-------------|
@@ -75,7 +75,7 @@ Feature	Description
 
   💎 Modern Typography: Segoe UI + Poppins
 
-🔧 Icon Fixes: Resolved with updated Font Awesome CDN
+  💎 Icon Fixes: Resolved with updated Font Awesome CDN
 
 html
 
@@ -124,13 +124,12 @@ Loaded dynamically via standard CRUD operations – no seeding script needed.
 
 ⚠️ Known Challenges & Fixes
 
-* Issue	Solution * 
+### ⚠️ Known Challenges & Fixes
 
-   🔒 Identity Injection	Used User.Identity.Name instead of injecting UserManager<IdentityUser>
+- 🔒 **Identity Injection** — Used `User.Identity.Name` instead of injecting `UserManager<IdentityUser>`
+- 🔁 **Redirect Errors** — Fixed using `RedirectToAction()` to maintain routing structure
+- 📱 **UI on Smaller Screens** — Resolved with Bootstrap media queries and `col-*` classes
 
-   🔁 Redirect Errors	Fixed using RedirectToAction() to maintain routing structure
-
-   📱 UI on Smaller Screens	Resolved with Bootstrap media queries and col-* classes
 
 🔄 UI/UX Refinements
 
