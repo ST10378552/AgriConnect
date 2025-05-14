@@ -30,6 +30,7 @@ Maintain system-wide data
 This project was developed using ASP.NET Core MVC , with Entity Framework Core and SQL Server for robust backend functionality.
 
 🚀 Key Features
+
 ✅ Farmer Registration & Profile Management
 
 ✅ Product Listing & Management
@@ -53,30 +54,29 @@ This project was developed using ASP.NET Core MVC , with Entity Framework Core a
 ✅ Custom styling using Font Awesome and Google Fonts
 
 👥 User Roles
+
 Farmer
 Farmers can:
 
-Create and update their profile
-Add, edit, and delete their products
-Browse products from other farmers and request to purchase
-View and approve purchase requests
+1. Create and update their profile
+2. Add, edit, and delete their products
+3. Browse products from other farmers and request to purchase
+4. View and approve purchase requests
+
 Example Credentials:
-Email
-Kate@gmail.com
-Password
-Kate@123
+Email : Kate@gmail.com
+Password : Kate@123
 
 Employee
 Employees are administrators who can:
 
-Create , edit , and delete farmers
-Manage all products in the system
-View farmer statistics and product analytics
+1. Create , edit , and delete farmers
+2. Manage all products in the system
+3. View farmer statistics and product analytics
+
 Example Credentials:
-Email
-Jones@gmail.com
-Password
-Jones@123
+Email : Jones@gmail.com
+Password : Jones@123
 
 💻 Technology Stack
 Framework
@@ -97,7 +97,6 @@ Hosting
 Azure (or local dev)
 
 📁 Folder Structure
-
 
 1 Controllers/
 2 Models/
