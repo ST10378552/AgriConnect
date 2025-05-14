@@ -1,0 +1,94 @@
+﻿@model AgriEnergyConnect.Models.Farmer
+
+@{
+    ViewData["Title"] = "Add New Farmer";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card shadow-sm border-0 rounded-3">
+                <div class="card-header bg-success text-white text-center py-4">
+                    <h2 class="mb-0">Add New Farmer</h2>
+                    <p class="mb-0 mt-1 fst-italic small">Enter farmer details below</p>
+                </div>
+
+                <div class="card-body p-4">
+                    <form asp-action="Create" class="needs-validation" novalidate>
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger mb-4" role="alert"></div>
+
+                        <!-- Full Name -->
+                        <div class="mb-3">
+                            <label asp-for="FullName" class="form-label fw-bold">
+                                <i class="fas fa-user me-1"></i> Full Name
+                            </label>
+                            <input asp-for="FullName" class="form-control form-control-lg" placeholder="John Doe" required />
+                            <span asp-validation-for="FullName" class="text-danger small d-block mt-1"></span>
+                        </div>
+
+                        <!-- Phone Number -->
+                        <div class="mb-3">
+                            <label asp-for="PhoneNumber" class="form-label fw-bold">
+                                <i class="fas fa-phone me-1"></i> Phone Number
+                            </label>
+                            <input asp-for="PhoneNumber" class="form-control form-control-lg" placeholder="+123 456 7890" required />
+                            <span asp-validation-for="PhoneNumber" class="text-danger small d-block mt-1"></span>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="mb-3">
+                            <label asp-for="Email" class="form-label fw-bold">
+                                <i class="fas fa-envelope me-1"></i> Email
+                            </label>
+                            <input asp-for="Email" type="email" class="form-control form-control-lg" placeholder="farmer@example.com" required />
+                            <span asp-validation-for="Email" class="text-danger small d-block mt-1"></span>
+                        </div>
+
+                        <!-- Location -->
+                        <div class="mb-3">
+                            <label asp-for="Location" class="form-label fw-bold">
+                                <i class="fas fa-map-marker-alt me-1"></i> Location
+                            </label>
+                            <input asp-for="Location" class="form-control form-control-lg" placeholder="City or Region" required />
+                            <span asp-validation-for="Location" class="text-danger small d-block mt-1"></span>
+                        </div>
+
+                        <!-- Farm Size -->
+                        <div class="mb-3">
+                            <label asp-for="FarmSize" class="form-label fw-bold">
+                                <i class="fas fa-ruler-combined me-1"></i> Farm Size (ha)
+                            </label>
+                            <input asp-for="FarmSize" class="form-control form-control-lg" type="number" step="0.1" placeholder="e.g., 50.5" required />
+                            <span asp-validation-for="FarmSize" class="text-danger small d-block mt-1"></span>
+                        </div>
+
+                        <!-- Years of Experience -->
+                        <div class="mb-3">
+                            <label asp-for="YearsOfExperience" class="form-label fw-bold">
+                                <i class="fas fa-briefcase me-1"></i> Years of Experience
+                            </label>
+                            <input asp-for="YearsOfExperience" class="form-control form-control-lg" type="number" placeholder="e.g., 10" required />
+                            <span asp-validation-for="YearsOfExperience" class="text-danger small d-block mt-1"></span>
+                        </div>
+
+                        <!-- Submit & Back Buttons -->
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-4">
+                            <a asp-action="Index" class="btn btn-outline-secondary me-md-2">
+                                <i class="fas fa-arrow-left me-1"></i> Back to List
+                            </a>
+                            <button type="submit" class="btn btn-success">
+                                <i class="fas fa-check-circle me-1"></i> Register Farmer
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

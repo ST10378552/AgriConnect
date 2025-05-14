@@ -1,0 +1,87 @@
+﻿@model AgriEnergyConnect.Models.Product
+
+@{
+    ViewData["Title"] = "Edit Product";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card shadow-sm border-0 rounded-3">
+                <div class="card-header bg-success text-white text-center py-4">
+                    <h2 class="mb-0">Edit Product</h2>
+                    <p class="mb-0 mt-1 fst-italic small">Update product details below</p>
+                </div>
+
+                <div class="card-body p-4">
+                    <form asp-action="Edit" method="post" class="needs-validation" novalidate>
+                        <input type="hidden" asp-for="ProductId" />
+
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger mb-4" role="alert"></div>
+
+                        <!-- Product Name -->
+                        <div class="mb-3">
+                            <label asp-for="Name" class="form-label fw-bold">
+                                <i class="fas fa-box me-1"></i> Product Name
+                            </label>
+                            <input asp-for="Name" class="form-control form-control-lg" placeholder="Enter product name" required />
+                            <span asp-validation-for="Name" class="text-danger small d-block mt-1"></span>
+                        </div>
+
+                        <!-- Category -->
+                        <div class="mb-3">
+                            <label asp-for="Category" class="form-label fw-bold">
+                                <i class="fas fa-tags me-1"></i> Category
+                            </label>
+                            <input asp-for="Category" class="form-control form-control-lg" placeholder="e.g., Vegetables, Dairy" required />
+                            <span asp-validation-for="Category" class="text-danger small d-block mt-1"></span>
+                        </div>
+
+                        <!-- Production Date -->
+                        <div class="mb-3">
+                            <label asp-for="ProductionDate" class="form-label fw-bold">
+                                <i class="fas fa-calendar-alt me-1"></i> Production Date
+                            </label>
+                            <input asp-for="ProductionDate" class="form-control form-control-lg" type="date" required />
+                            <span asp-validation-for="ProductionDate" class="text-danger small d-block mt-1"></span>
+                        </div>
+
+                        <!-- Description -->
+                        <div class="mb-3">
+                            <label asp-for="Description" class="form-label fw-bold">
+                                <i class="fas fa-align-left me-1"></i> Description
+                            </label>
+                            <textarea asp-for="Description" class="form-control" rows="4" placeholder="Describe the product..."></textarea>
+                            <span asp-validation-for="Description" class="text-danger small d-block mt-1"></span>
+                        </div>
+
+                        <!-- Farmer Email -->
+                        <div class="mb-3">
+                            <label asp-for="FarmerEmail" class="form-label fw-bold">
+                                <i class="fas fa-user-farm me-1"></i> Farmer Email
+                            </label>
+                            <input asp-for="FarmerEmail" class="form-control form-control-lg" placeholder="farmer@example.com" required />
+                            <span asp-validation-for="FarmerEmail" class="text-danger small d-block mt-1"></span>
+                        </div>
+
+                        <!-- Submit & Back Buttons -->
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-4">
+                            <a asp-action="Index" class="btn btn-outline-secondary me-md-2">
+                                <i class="fas fa-arrow-left me-1"></i> Back to List
+                            </a>
+                            <button type="submit" class="btn btn-success">
+                                <i class="fas fa-save me-1"></i> Save Changes
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

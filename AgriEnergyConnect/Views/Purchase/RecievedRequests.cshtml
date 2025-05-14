@@ -1,0 +1,63 @@
+﻿@model IEnumerable<AgriEnergyConnect.Models.PurchaseRequest>
+
+@{
+    ViewData["Title"] = "Received Purchase Requests";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-sm border-0 rounded-3">
+                <div class="card-header bg-success text-white text-center py-4">
+                    <h2 class="mb-0">Received Purchase Requests</h2>
+                    <p class="mb-0 mt-1 fst-italic small text-white-50">See who wants to buy your products.</p>
+                </div>
+
+                <div class="card-body p-4">
+
+                    @if (Model.Any())
+                    {
+                        <div class="row g-4">
+                            @foreach (var item in Model)
+                            {
+                                <div class="col-md-12">
+                                    <div class="card shadow-sm border-0 rounded-3 h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title fw-bold">
+                                                <i class="fas fa-box text-success me-1"></i> @item.Product?.Name
+                                            </h5>
+
+                                            <p class="card-text">
+                                                <strong><i class="fas fa-user-farm text-success me-1"></i> Requesting Farmer:</strong>
+                                                @item.RequestingFarmerEmail
+                                            </p>
+
+                                            <p class="card-text">
+                                                <strong><i class="fas fa-calendar-alt text-success me-1"></i> Date Requested:</strong>
+                                                @item.RequestedOn.ToString("yyyy-MM-dd")
+                                            </p>
+
+                                            <div class="d-flex justify-content-end">
+                                                <form asp-action="ApproveRequest" method="post">
+                                                    <input type="hidden" name="id" value="@item.Id" />
+                                                    <button type="submit" class="btn btn-success btn-sm">
+                                                        <i class="fas fa-check-circle me-1"></i> Approve
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="alert alert-info text-center mb-0">No purchase requests yet.</div>
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

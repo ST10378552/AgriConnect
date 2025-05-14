@@ -1,0 +1,139 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+    text-align: start;
+    .btn-green
+
+{
+    background-color: #28a745; /* Bootstrap’s success green */
+    border-color: #28a745;
+    color: white;
+}
+
+.btn-green:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+/* Ensure the entire navbar uses white text */
+.navbar-dark .navbar-nav .nav-link {
+    color: white !important;
+}
+
+    /* Optional: Add hover effect for better usability */
+    .navbar-dark .navbar-nav .nav-link:hover {
+        color: #f8f9fa; /* Lighter shade of white for hover effect */
+    }
+
+/* Reduce font size significantly */
+.navbar-nav .nav-link {
+    font-size: 0.7rem; /* Smaller font size */
+}
+
+    /* Ensure icons and text are aligned */
+    .navbar-nav .nav-link i {
+        margin-right: 3px; /* Reduced space between icon and text */
+    }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar-nav .nav-link {
+        font-size: 0.6rem; /* Even smaller font size for mobile */
+    }
+}
+/* Add subtle hover effect to table rows */
+.table-hover tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* Improve button spacing and font size */
+.btn-sm i {
+    font-size: 0.85rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .table-responsive .table thead {
+        display: none;
+    }
+
+    .table-responsive .table tr {
+        display: block;
+        margin-bottom: 1rem;
+        border: 1px solid #dee2e6;
+        border-radius: 0.375rem;
+        padding: 0.5rem;
+    }
+
+    .table-responsive td {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 0;
+        font-size: 0.9rem;
+    }
+
+        .table-responsive td::before {
+            content: attr(data-label);
+            font-weight: bold;
+            min-width: 120px;
+        }
+}
+/* Add some spacing between icon and label */
+.dl-horizontal dt i {
+    min-width: 20px;
+}
+.form-label i {
+    min-width: 20px;
+}
+.form-label i {
+    min-width: 20px;
+}
+
+.card-header .small {
+    opacity: 0.8;
+}
+.form-label i {
+    min-width: 20px;
+}
+.card-header .small {
+    opacity: 0.8;
+}
+.table th i,
+.btn i {
+    min-width: 20px;
+}
+.rounded-top-3 {
+    border-top-left-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+}
+.fas {
+    min-width: 20px;
+}
+}
+}
+}

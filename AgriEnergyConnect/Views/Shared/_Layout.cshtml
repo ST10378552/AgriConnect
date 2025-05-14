@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - AgriEnergyConnect</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css " />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/AgriEnergyConnect.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-success shadow-sm">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold" asp-area="" asp-controller="Home" asp-action="Index">AgriEnergyConnect</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <!-- Home -->
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">
+                                <i class="fas fa-home me-1"></i> Home
+                            </a>
+                        </li>
+
+                        <!-- Forum -->
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-controller="Post" asp-action="Index">
+                                <i class="fas fa-comments me-1"></i> Forum
+                            </a>
+                        </li>
+
+                        <!-- Educational Resources -->
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-controller="Resources" asp-action="Index">
+                                <i class="fas fa-book me-1"></i> Resources
+                            </a>
+                        </li>
+
+                        <!-- Farmers Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" id="farmerDropdown" role="button"
+                               data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-users me-1"></i> Farmers <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="farmerDropdown">
+                                <li><a class="dropdown-item" asp-controller="Farmers" asp-action="Index">Manage Farmers</a></li>
+                                <li><a class="dropdown-item" asp-controller="Farmers" asp-action="Create">Add New Farmer</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Products Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" id="productDropdown" role="button"
+                               data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-boxes-stacked me-1"></i> Products <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="productDropdown">
+                                <li><a class="dropdown-item" asp-controller="Products" asp-action="Index">Manage Products</a></li>
+                                <li><a class="dropdown-item" asp-controller="Products" asp-action="Create">Add New Product</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Browse Products -->
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-controller="Purchase" asp-action="Browse">
+                                <i class="fas fa-search me-1"></i> Browse
+                            </a>
+                        </li>
+
+                        <!-- View Purchase Requests -->
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-controller="Purchase" asp-action="RecievedRequests">
+                                <i class="fas fa-file-invoice-dollar me-1"></i> Requests
+                            </a>
+                        </li>
+
+                        <!-- Employees Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" id="employeeDropdown" role="button"
+                               data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-user-tie me-1"></i> Employees <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="employeeDropdown">
+                                <li><a class="dropdown-item" asp-controller="Employees" asp-action="Index">Manage Employees</a></li>
+                                <li><a class="dropdown-item" asp-controller="Employees" asp-action="Create">Add New Employee</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Privacy -->
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Privacy">
+                                <i class="fas fa-lock me-1"></i> Privacy
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- User Actions -->
+                    <ul class="navbar-nav ms-auto">
+                        @if (User.Identity?.IsAuthenticated ?? false)
+                        {
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-white" href="#" id="userDropdown" role="button"
+                                   data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fas fa-user-circle me-1"></i> Hello, @User.Identity.Name! <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                                    <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                                        <button type="submit" class="dropdown-item">Logout</button>
+                                    </form>
+                                </ul>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-white" asp-area="Identity" asp-page="/Account/Register">
+                                    <i class="fas fa-user-plus me-1"></i> Register
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" asp-area="Identity" asp-page="/Account/Login">
+                                    <i class="fas fa-sign-in-alt me-1"></i> Login
+                                </a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-4">
+        @RenderBody()
+    </main>
+
+    <footer class="border-top footer text-muted bg-light py-3 mt-5">
+        <div class="container text-center text-md-start d-flex flex-column flex-md-row justify-content-between align-items-center">
+            <small>&copy; @DateTime.Now.Year - AgriEnergyConnect</small>
+            <small><a asp-area="" asp-controller="Home" asp-action="Privacy" class="text-decoration-none">Privacy Policy</a></small>
+            <small>Empowering sustainable agriculture through green energy solutions.</small>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <!-- Render any page-specific scripts -->
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

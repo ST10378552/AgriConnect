@@ -1,0 +1,80 @@
+﻿@model IEnumerable<AgriEnergyConnect.Models.Product>
+
+@{
+    ViewData["Title"] = "Browse Products";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <div class="card shadow-sm border-0 rounded-3">
+                <div class="card-header bg-success text-white text-center py-4">
+                    <h2 class="mb-0">Browse Products</h2>
+                    <p class="mb-0 mt-1 fst-italic small text-white-50">Find products from other farmers and request to purchase.</p>
+                </div>
+
+                <div class="card-body p-4">
+                    <!-- Search Form -->
+                    <form method="get" asp-action="Browse" class="d-flex flex-wrap gap-2 mb-4">
+                        <input type="text" name="productName" value="@ViewData["ProductNameFilter"]" class="form-control form-control-sm" placeholder="Search by Product Name" />
+                        <input type="text" name="farmerEmail" value="@ViewData["FarmerEmailFilter"]" class="form-control form-control-sm" placeholder="Search by Farmer Email" />
+                        <input type="text" name="category" value="@ViewData["CategoryFilter"]" class="form-control form-control-sm" placeholder="Search by Category" />
+                        <button type="submit" class="btn btn-secondary btn-sm">
+                            <i class="fas fa-search me-1"></i> Search
+                        </button>
+                        <a asp-action="Browse" class="btn btn-outline-secondary btn-sm">
+                            <i class="fas fa-times me-1"></i> Clear
+                        </a>
+                    </form>
+
+                    <!-- Products Grid -->
+                    @if (Model.Any())
+                    {
+                        <div class="row g-4">
+                            @foreach (var item in Model)
+                            {
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="card h-100 shadow-sm border-0 rounded-3">
+                                        <div class="card-body">
+                                            <h5 class="card-title fw-bold">
+                                                <i class="fas fa-box text-success me-1"></i> @Html.DisplayFor(model => item.Name)
+                                            </h5>
+
+                                            <p class="card-text">
+                                                <strong><i class="fas fa-tags text-success me-1"></i> Category:</strong>
+                                                @Html.DisplayFor(model => item.Category)
+                                            </p>
+
+                                            <p class="card-text">
+                                                <strong><i class="fas fa-user-farm text-success me-1"></i> Farmer:</strong>
+                                                @Html.DisplayFor(model => item.FarmerEmail)
+                                            </p>
+
+                                            <p class="card-text">
+                                                <strong><i class="fas fa-calendar-alt text-success me-1"></i> Production Date:</strong>
+                                                @item.ProductionDate.ToString("yyyy-MM-dd")
+                                            </p>
+
+                                            <div class="d-flex justify-content-end">
+                                                <form asp-action="Request" method="post">
+                                                    <input type="hidden" name="productId" value="@item.ProductId" />
+                                                    <button type="submit" class="btn btn-success btn-sm">
+                                                        <i class="fas fa-handshake me-1"></i> Request to Purchase
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="alert alert-info text-center mb-0">No products found.</div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

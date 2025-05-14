@@ -1,0 +1,57 @@
+﻿@model IEnumerable<AgriEnergyConnect.Models.Post>
+
+@{
+    ViewData["Title"] = "Interactive Forums";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card shadow-sm border-0 rounded-3">
+                <div class="card-header bg-primary text-white text-center py-4">
+                    <h2 class="mb-0">Interactive Forums</h2>
+                    <p class="mb-0 mt-1 fst-italic small text-white-50">Seek advice, share experiences, and collaborate on sustainable farming initiatives.</p>
+                </div>
+
+                <div class="card-body p-4">
+
+                    <!-- Create Post Button -->
+                    <div class="d-flex justify-content-end mb-4">
+                        <a asp-action="Create" class="btn btn-success">
+                            <i class="fas fa-plus-circle me-1"></i> Create New Post
+                        </a>
+                    </div>
+
+                    <!-- Forum Posts -->
+                    @if (!Model.Any())
+                    {
+                        <div class="alert alert-info text-center mb-0">
+                            <i class="fas fa-comments fa-2x text-muted mb-2 d-block"></i><br />
+                            No posts available yet. Be the first to start a conversation!
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="list-group list-group-flush gap-3">
+                            @foreach (var post in Model)
+                            {
+                                <div class="list-group-item px-0 py-3 border-bottom rounded-3 bg-light">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <h5 class="mb-0 fw-bold">
+                                            <i class="fas fa-user-circle text-primary me-1"></i> @post.FarmerEmail
+                                        </h5>
+                                        <small class="text-muted">
+                                            <i class="far fa-clock me-1"></i> @post.CreatedOn.ToString("yyyy-MM-dd HH:mm")
+                                        </small>
+                                    </div>
+                                    <div class="card-text mt-2">@Html.Raw(post.Content)</div>
+                                </div>
+                            }
+                        </div>
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

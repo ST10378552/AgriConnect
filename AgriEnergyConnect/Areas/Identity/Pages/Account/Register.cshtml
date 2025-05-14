@@ -1,0 +1,86 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card shadow-sm border-0 rounded-3 mb-4">
+                <div class="card-header bg-success text-white text-center py-4">
+                    <h2 class="mb-0">Create a New Account</h2>
+                    <p class="mb-0 mt-1 fst-italic small">Join AgriEnergyConnect today!</p>
+                </div>
+
+                <div class="card-body p-4">
+                    <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger mb-4" role="alert"></div>
+
+                        <!-- First Name -->
+                        <div class="mb-3">
+                            <label asp-for="Input.FirstName" class="form-label fw-bold"></label>
+                            <input asp-for="Input.FirstName" class="form-control form-control-lg" autocomplete="firstname" aria-required="true" placeholder="First Name" />
+                            <span asp-validation-for="Input.FirstName" class="text-danger small d-block mt-1"></span>
+                        </div>
+
+                        <!-- Last Name -->
+                        <div class="mb-3">
+                            <label asp-for="Input.LastName" class="form-label fw-bold"></label>
+                            <input asp-for="Input.LastName" class="form-control form-control-lg" autocomplete="lastname" aria-required="true" placeholder="Last Name" />
+                            <span asp-validation-for="Input.LastName" class="text-danger small d-block mt-1"></span>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="mb-3">
+                            <label asp-for="Input.Email" class="form-label fw-bold"></label>
+                            <input asp-for="Input.Email" class="form-control form-control-lg" autocomplete="username" aria-required="true" placeholder="name@example.com" />
+                            <span asp-validation-for="Input.Email" class="text-danger small d-block mt-1"></span>
+                        </div>
+
+                        <!-- Password -->
+                        <div class="mb-3">
+                            <label asp-for="Input.Password" class="form-label fw-bold"></label>
+                            <input asp-for="Input.Password" class="form-control form-control-lg" autocomplete="new-password" aria-required="true" placeholder="••••••••" />
+                            <span asp-validation-for="Input.Password" class="text-danger small d-block mt-1"></span>
+                        </div>
+
+                        <!-- Confirm Password -->
+                        <div class="mb-3">
+                            <label asp-for="Input.ConfirmPassword" class="form-label fw-bold"></label>
+                            <input asp-for="Input.ConfirmPassword" class="form-control form-control-lg" autocomplete="new-password" aria-required="true" placeholder="••••••••" />
+                            <span asp-validation-for="Input.ConfirmPassword" class="text-danger small d-block mt-1"></span>
+                        </div>
+
+                        <!-- Role Selection -->
+                        <div class="mb-3">
+                            <label asp-for="Input.SelectedRole" class="form-label fw-bold"></label>
+                            <select asp-for="Input.SelectedRole" class="form-select form-select-lg" aria-required="true">
+                                <option value="">-- Select Role --</option>
+                                <option value="Farmer">Farmer</option>
+                                <option value="Employee">Employee</option>
+                            </select>
+                            <span asp-validation-for="Input.SelectedRole" class="text-danger small d-block mt-1"></span>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="d-grid gap-2 mt-4">
+                            <button type="submit" class="btn btn-success btn-lg">Register</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="card-footer bg-transparent text-center py-3">
+                    <p class="mb-0">
+                        Already have an account?
+                        <a asp-page="./Login" class="text-success fw-bold">Log in</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
