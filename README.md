@@ -49,28 +49,30 @@ Built with ASP.NET Core MVC, Entity Framework Core, and SQL Server, this platfor
 ✅ Fully Integrated SQL Server DB
 
 👥 User Roles
+
 🧑‍🌾 Farmer
-Create/update profile
 
-Add/edit/delete products
+1. Create/update profile
 
-Browse other products
+2. Add/edit/delete products
 
-Request to purchase
+3. Browse other products
+
+4. Request to purchase
 
 View/approve incoming purchase requests
 
 🔑 Example Farmer Login:
 
-graphql
-Copy
-Edit
 Email: Kate@gmail.com  
-Password: Kate@123
-👩‍💼 Employee (Administrator)
-Manage farmers and products
 
-Access system-wide analytics
+Password: Kate@123
+
+👩‍💼 Employee (Administrator)
+
+1. Manage farmers and products
+
+2. Access system-wide analytics
 
 🔑 Example Employee Login:
 
