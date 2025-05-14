@@ -1,4 +1,4 @@
-🌱 Agri-Energy Connect 🔋
+🌱 AgriEnergyConnect 🔋
 <div align="center">
 
 ASP.NET Core
@@ -11,77 +11,199 @@ Bootstrap
 
 <h3>Sustainable Agriculture Meets Green Energy</h3>
 
-<p>A modern platform connecting sustainable farmers with renewable energy solutions</p>
+<p>A modern platform connecting farmers with renewable energy solutions and peer-to-peer product purchasing.</p>
+
 </div>
 
-📝 Project Overview
-Agri-Energy Connect is a web-based platform designed to bridge the gap between sustainable agriculture and green energy solutions in South Africa. The platform connects farmers with energy experts, facilitating knowledge sharing, resource access, and collaboration opportunities to promote sustainable farming practices and renewable energy adoption.
+🧾 Project Overview
+AgriEnergyConnect is a web application designed to help farmers manage their agricultural products, connect with other farmers, and facilitate the purchase of sustainable goods through a secure and intuitive interface.
 
-Who It's For
-Farmers : Agricultural producers looking to manage their profiles, products, and engage with other farmers.
-Employees : System administrators managing farmer accounts, product listings, and overall platform operations.
-Architecture & Design Patterns
-The application follows the Model-View-Controller (MVC) pattern, leveraging ASP.NET Core for robust backend functionality and Bootstrap 5 for responsive frontend design. Entity Framework Core is used for database interactions, ensuring efficient data management.
+The app allows farmers to:
 
-Database Choice
-We chose Microsoft SQL Server as the database due to its reliability, scalability, and seamless integration with ASP.NET Core. SQL Server provides robust features like transaction support, security, and ease of use for both development and production environments.
+Register and maintain a profile
+Add and manage their own products
+Browse and request to purchase products from other farmers
+View received purchase requests and approve them
+Employees can:
 
-🛠️ Key Features
-User Authentication
-Secure login and role-based access control using ASP.NET Identity.
-Password hashing ensures user credentials are stored securely.
-Farmer Profiles
-Detailed farmer information including farm details, contact information, and location.
-Farmers can manage their profiles, update personal details, and view their product listings.
-Product Marketplace
-Platform for farmers to showcase their sustainable agricultural products.
-Employees can manage all product listings across the platform.
-Responsive Design
-Built with Bootstrap 5 to ensure a mobile-friendly interface.
-Font icons from FontAwesome enhance usability and visual appeal.
-Data Management
-Entity Framework Core handles CRUD operations efficiently.
-SQL Server serves as the backend database, providing reliable data storage and retrieval.
-🚀 User Roles
-The platform supports two primary user roles:
+Manage farmer accounts and products
+Maintain system-wide data
+This project was developed using ASP.NET Core MVC , with Entity Framework Core and SQL Server for robust backend functionality.
+
+🚀 Key Features
+✅ Farmer Registration & Profile Management
+✅ Product Listing & Management
+✅ Purchase Requests (Farmers can request to buy products and owners can approve)
+✅ Role-Based Authentication
+✅ Responsive UI using Bootstrap 5
+✅ Educational Resources on green energy
+✅ Interactive Forum for farmers to communicate
+✅ Clean navigation bar with icons
+✅ Fully integrated database (Agriculture Energy)
+✅ CRUD operations for all entities
+✅ Custom styling using Font Awesome and Google Fonts
+👥 User Roles
+Farmer
+Farmers can:
+
+Create and update their profile
+Add, edit, and delete their products
+Browse products from other farmers and request to purchase
+View and approve purchase requests
+Example Credentials:
+Email
+Kate@gmail.com
+Password
+Kate@123
 
 Employee
-Responsibilities :
-Manage farmer accounts and profiles.
-View all products across the platform.
-Access detailed farmer information and performance metrics.
-Farmer
-Capabilities :
-Manage their profile and farm details.
-Add, edit, and delete their product listings.
-View products from other farmers and request purchases.
+Employees are administrators who can:
+
+Create , edit , and delete farmers
+Manage all products in the system
+View farmer statistics and product analytics
+Example Credentials:
+Email
+Jones@gmail.com
+Password
+Jones@123
+
 💻 Technology Stack
-Framework : ASP.NET Core MVC
-Frontend : HTML5, CSS3, JavaScript, Bootstrap 5
-Backend : C#, Entity Framework Core
-Database : Microsoft SQL Server
-Authentication : ASP.NET Identity with password hashing
-Styling : FontAwesome Icons, Google Fonts (Poppins, Inter)
-🏁 Setup Instructions
+Framework
+ASP.NET Core MVC
+Backend Language
+C#, Entity Framework Core
+Database
+Microsoft SQL Server (
+Agriculture Energy
+)
+Frontend
+HTML5, CSS3, Bootstrap 5, JavaScript
+Authentication
+ASP.NET Identity UI
+Icons
+Font Awesome
+Hosting
+Azure (or local dev)
+
+📁 Folder Structure
+
+
+1
+2
+3
+4
+5
+6
+Controllers/
+Models/
+Views/
+wwwroot/
+Data/
+Pages/
+Key controllers:
+
+FarmersController.cs
+ProductsController.cs
+PurchaseController.cs
+HomeController.cs
+AccountController.cs (built-in Identity)
+Main models:
+
+Farmer.cs
+Product.cs
+PurchaseRequest.cs
+ChatMessage.cs
+Database context:
+
+ApplicationDbContext.cs – connects to Agriculture Energy DB
+📦 Database Usage
+We used Microsoft SQL Server as our backend, and named the database Agriculture Energy .
+
+Sample Data Preloaded:
+Farmers: Kate@gmail.com, RP@gmail.com
+Products: Organic Tomatoes, Free-Range Eggs, etc.
+Purchase Requests: Auto-generated when users request to buy a product
+No manual seeding required — sample data is automatically handled during development via test login and CRUD operations. 
+
+🎮 Feature Demonstration (Rubric-Focused)
+1. Farmer Registration & Login
+Users register via the built-in Identity system
+After login, they're redirected to their dashboard
+2. Product Browsing
+Farmers can browse all available products from other farmers
+Filter by name, email, or category
+Clicking "Request to Purchase" sends a record to the PurchaseRequests table
+3. Approving Purchase Requests
+Farmers can view all incoming requests under /Purchase/ReceivedRequests
+Approving a request marks it as approved in the database
+4. Forum / Chat
+Farmers can post messages and engage with others
+Messages are stored in the ChatMessages table
+5. Educational Resources
+A dedicated page with links to:
+Online courses
+Webinars
+Downloadable guides
+Video tutorials
+6. Profile Management
+Farmers can view and edit their details
+Accessed via dropdown menu in the top-right corner
+🎨 User Interface Design
+All pages follow a consistent, card-based layout using Bootstrap 5 and Font Awesome icons for a clean, professional look.
+
+Enhancements:
+Card hover effects for interactivity
+Responsive grid layout for mobile compatibility
+Consistent color scheme (green-themed for success actions)
+Clear form validation and feedback
+Easy-to-read typography using Segoe UI and Poppins
+Icons were initially not working due to an extra space in the CDN URL. We've fixed that in the latest code:
+
+html
+
+
+1
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css " />
+⚠️ Challenges and Changes
+🛠️ Technical Challenges
+Identity Dependency Issue
+Initially had trouble with UserManager<IdentityUser> dependency injection
+Fixed by using User.Identity.Name instead for quick access
+Redirection Errors
+Encountered localhost errors after approval
+Solved by ensuring correct routing and using RedirectToAction("ReceivedRequests")
+UI Responsiveness
+Some cards and text broke on smaller screens
+Resolved by applying d-flex, flex-wrap, and col-md-* classes
+🔄 Design Changes
+From Table Layout to Card Grids
+Improved readability and mobile experience
+Added hover animations and icons
+Integrated Purchase Request Approval
+Originally just managed in code — now visible and actionable in the UI
+Added Full Navigation Bar with Icons
+Made all navigation items clickable and accessible
+🛠️ Setup Instructions
 Prerequisites
 Ensure you have the following installed:
 
-.NET SDK
-Visual Studio 2022 or Visual Studio Code
-SQL Server (Express edition sufficient for development)
+.NET SDK 9.0
+Visual Studio 2022 or VS Code
+SQL Server Express
 SQL Server Management Studio
-Clone the Repository
+1. Clone the Repository
 bash
 
 
 1
 2
-git clone https://github.com/ST10378552/AgriConnect
-cd AgriEnergyConnects
-Database Configuration
-Open SQL Server Management Studio.
-Create a new database named AgricultureEnergy.
-Update the connection string in appsettings.json:
+git clone https://github.com/ST10378552/AgriConnect.git 
+cd AgriConnect
+2. Configure the Database
+Open SQL Server Management Studio
+Create a new database named Agriculture Energy
+Update connection string in appsettings.json:
 json
 
 
@@ -90,10 +212,19 @@ json
 3
 ⌄
 "ConnectionStrings": {
-  "DefaultConnection": "Server=DEVESH\\SQLEXPRESS;Database=AgricultureEnergy;Trusted_Connection=True;MultipleActiveResultSets=true;TrustServerCertificate=True"
+  "DefaultConnection": "Server=(localdb)\\MSSQLLocalDB;Database=Agriculture Energy;Trusted_Connection=True;MultipleActiveResultSets=true"
 }
-Apply Database Migrations
-Run the following commands:
+3. Apply Migrations
+Using Package Manager Console:
+
+powershell
+
+
+1
+2
+Add-Migration InitialCreate
+Update-Database
+Or CLI:
 
 bash
 
@@ -102,12 +233,13 @@ bash
 2
 dotnet ef migrations add InitialCreate
 dotnet ef database update
-Build and Run the Application
-Using Visual Studio:
-Open the solution file (AgriEnergyConnects.sln).
-Build the solution (Ctrl+Shift+B).
-Press F5 to run the application.
-Using the Command Line:
+4. Build and Run the Application
+In Visual Studio:
+
+Open .sln file
+Press F5 to run the app
+In Command Line:
+
 bash
 
 
@@ -115,88 +247,50 @@ bash
 2
 dotnet build
 dotnet run
-The application should now be running at https://localhost:7066/.
+App will run at https://localhost:7029/
 
-🎮 Using the Application
-Landing Page
-Provides a welcome screen with links to Login and Register pages.
-Authentication
-Use demo credentials:
-Employee : Email: Khan@gmail.com, Password: Khan@123
-Farmer : Email: Kate@gmail.com, Password: Kate@123
-Dashboard
-After successful registration or login, users are redirected to the Home page.
-Navigation bar dynamically updates based on the user's role.
-For Employees
-Managing Farmers
-Navigate to the "Farmers" section to view registered farmers.
-Add new farmers using the "Create New" button.
-View detailed farmer profiles by clicking "Details."
-Delete farmer profiles by clicking "Delete."
-Viewing Products
-Access the "All Products" section to browse products from all farmers.
-Filter products by category or date range.
-For Farmers
-Managing Profile
-Access your profile from the "Farmers Profile" tab.
-Edit/update your profile information using the "Save Changes" button.
-Managing Products
-Navigate to "Products" to view current product listings.
-Add new products using the "Create New Product" button.
-Edit, view, or delete existing products.
-Forum/Farmers Chat
-Navigate to the "Farmers Chat" to chat with other farmers.
-Send messages to the community.
-🛠️ Development Workflow
-Project Structure
-The application follows the standard ASP.NET Core MVC structure:
+🧪 Testing Credentials
+Use these to test the app:
 
-Controllers/
-Handles application logic.
-Example: FarmersController.cs, ProductsController.cs.
-Models/
-Represents data entities.
-Example: Farmer.cs, Product.cs.
-Views/
-Contains views organized by controller.
-Example: Farmers/, Products/.
-Data/
-Contains database context and configurations.
-Example: ApplicationDbContext.cs.
-wwwroot/
-Static files like CSS, JS, images, and libraries.
-Extending the Application
-Adding New Features
-Create new controllers and corresponding views.
-Update navigation in _Layout.cshtml.
-Modifying Database Schema
-Update model classes.
-Create migrations:
+Farmer
+Kate@gmail.com
+Kate@123
+Employee
+Jones@gmail.com
+Jones@123
+
+Once logged in:
+
+Farmers can go to /Purchase/Browse to see products
+Employees can manage farmers/products from /Farmers/Index or /Products/Index
+📝 Development Workflow
+Project Structure Highlights
+Controllers/ : Handles user input and logic
+Models/ : Contains business logic and entity definitions
+Views/ : Razor views organized per controller
+Data/ : ApplicationDbContext handles database connections
+wwwroot/ : Static assets (CSS, JS, images)
+Extending the App
+Want to add more features?
+
+Extend existing controllers
+Add new views inside Views/YourController/
+Modify the database schema:
 bash
 
 
 1
 2
-dotnet ef migrations add MigrationName
+dotnet ef migrations add NewFeatureMigration
 dotnet ef database update
-🧪 Testing
-The application includes sample data for testing:
-
-Sample Users
-Employee: Email: employee1@gmail.com, Password: password123
-Farmers: Email: farmer1@gmail.com, Password: password123; Email: farmer2@gmail.com, Password: password123
-Sample Products
-Organic Tomatoes
-Free-Range Eggs
-Grass-Fed Beef
-Honey
-Organic Spinach
-📜 License
-This project is licensed under the MIT License - see the LICENSE file for details.
+📄 License
+This project is licensed under the MIT License – see the LICENSE file for details.
 
 📞 Contact
-For questions or support:
+For questions or support regarding this project, please reach out:
 
-Email: naidoodevesh32@gmail.com
-GitHub: ST10378552
-Thank you for using Agri-Energy Connect! We hope this platform contributes to more sustainable farming practices and broader adoption of renewable energy solutions in agriculture.
+📧 Email : naidoodevesh32@gmail.com
+🐱 GitHub : https://github.com/ST10378552/AgriConnect
+
+🙌 Thank You!
+Thank you for checking out AgriEnergyConnect – a platform that empowers farmers to share sustainable practices, trade green products, and learn about renewable energy solutions.
