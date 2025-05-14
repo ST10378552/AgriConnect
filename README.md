@@ -89,18 +89,13 @@ Azure (or local dev)
 📁 Folder Structure
 
 
-1
-2
-3
-4
-5
-6
-Controllers/
-Models/
-Views/
-wwwroot/
-Data/
-Pages/
+1 Controllers/
+2 Models/
+3 Views/
+4 wwwroot/
+5 Data/
+6 Pages/
+
 Key controllers:
 
 FarmersController.cs
