@@ -7,11 +7,7 @@
   ![SQL Server](https://img.shields.io/badge/SQL%20Server-2019-red?style=for-the-badge&logo=microsoftsqlserver)
   ![Bootstrap](https://img.shields.io/badge/Bootstrap-5.0-blueviolet?style=for-the-badge&logo=bootstrap)
 
-## 🌿 Sustainable Agriculture Meets Green Energy
-
-**Agri-Energy Connect** is a modern ASP.NET Core MVC platform that connects farmers with renewable energy solutions and supports peer-to-peer product purchasing.
-
----
+</div> <h3 align="center">Sustainable Agriculture Meets Green Energy</h3> <p align="center">A modern ASP.NET Core MVC platform connecting farmers with renewable energy solutions and peer-to-peer product purchasing.</p>
 
 ## 🧾 Project Overview
 
