@@ -88,18 +88,12 @@ bash
 
 AgriConnect/
 │
-├── Controllers/   
-# Route and action logic
+├── Controllers/   # Route and action logic
 │   ├── FarmersController.cs
-
 │   ├── ProductsController.cs
-
 │   ├── PurchaseController.cs
-
 │   ├── EmployeesController.cs
-
 │   ├── PostController.cs
-
 │   └── AccountController.cs
 
 │
@@ -118,6 +112,7 @@ AgriConnect/
 ├── wwwroot/                  # Static assets (CSS, JS, images)
 │
 └── appsettings.json          # DB connection string
+
 🧪 Sample Data
 Loaded dynamically via standard CRUD operations – no seeding script needed.
 
