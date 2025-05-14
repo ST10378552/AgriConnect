@@ -34,6 +34,7 @@ Providing a secure, role-based platform for collaboration
 📚 Access educational green energy content
 
 👩‍💼 Employee (Administrator)
+
 👤 Manage farmer accounts and product listings
 
 📊 View system-wide data and analytics
@@ -46,17 +47,27 @@ Farmer	Kate@gmail.com	Kate@123
 Employee	Jones@gmail.com	Jones@123
 
 🚀 Key Features
+
 Feature	Description
+
 ✅ Registration & Login	Secure role-based authentication using ASP.NET Identity
+
 ✅ Product CRUD	Farmers can manage their own listings
+
 ✅ Purchase Request System	Send, receive, and approve product purchase requests
+
 ✅ Chat Forum	Community-style discussion board for farmers
+
 ✅ Green Energy Learning Hub	Access to curated educational resources (courses, webinars, guides)
+
 ✅ Responsive UI Design	Built with Bootstrap 5 and mobile-friendly grid layout
+
 ✅ Profile Management	Users can update their own information with validation
+
 ✅ Integrated SQL Server DB	Automatic CRUD-based sample data generation without manual seeding
 
 🎨 UI Design Highlights
+
 🟩 Card-Based Layout with d-flex and flex-wrap for responsiveness
 
 🌀 Hover Effects to improve user interaction feedback
@@ -77,13 +88,20 @@ bash
 
 AgriConnect/
 │
-├── Controllers/              # Route and action logic
+├── Controllers/   
+# Route and action logic
 │   ├── FarmersController.cs
+
 │   ├── ProductsController.cs
+
 │   ├── PurchaseController.cs
+
 │   ├── EmployeesController.cs
+
 │   ├── PostController.cs
+
 │   └── AccountController.cs
+
 │
 ├── Models/                   # Domain entities
 │   ├── Farmer.cs
