@@ -10,21 +10,24 @@
 
 </div> <h3 align="center">Sustainable Agriculture Meets Green Energy</h3> <p align="center">A modern platform connecting farmers with renewable energy solutions and peer-to-peer product purchasing.</p>
 🧾 Project Overview
+
 AgriEnergyConnect is a web application designed to empower farmers by enabling them to manage agricultural products, connect with others, and purchase sustainable goods via a secure and intuitive interface.
 
 👨‍🌾 Farmer Capabilities:
-Register and manage profiles
 
-Add/edit/delete products
+1. Register and manage profiles
 
-Browse and purchase from others
+2. Add/edit/delete products
 
-Approve incoming purchase requests
+3. Browse and purchase from others
+
+4. Approve incoming purchase requests
 
 👩‍💼 Employee Capabilities:
-Manage farmer accounts and product listings
 
-View analytics and system-wide data
+1. Manage farmer accounts and product listings
+
+2. View analytics and system-wide data
 
 Built with ASP.NET Core MVC, Entity Framework Core, and SQL Server, this platform ensures scalability and robust backend operations.
 
