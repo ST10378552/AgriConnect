@@ -134,6 +134,26 @@ body {
 .fas {
     min-width: 20px;
 }
+.card {
+    transition: transform 0.2s ease;
+}
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+    }
+    /* Card hover effect */
+    .card.hover-lift:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(40, 167, 69, 0.2); /* Green-based shadow */
+        transition: all 0.2s ease-in-out;
+    }
+
+/* Consistent icon spacing */
+.card-text i,
+.card-title i {
+    min-width: 20px;
+}
 }
 }
 }
