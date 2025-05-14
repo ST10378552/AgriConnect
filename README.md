@@ -107,17 +107,25 @@ Azure (or local dev)
 
 Key controllers:
 
-FarmersController.cs
-ProductsController.cs
-PurchaseController.cs
-HomeController.cs
-AccountController.cs (built-in Identity)
+1. FarmersController.cs
+2. ProductsController.cs
+3. PurchaseController.cs
+4. HomeController.cs
+5. EmployeesController.cs
+6. ResourcesController.cs
+7. PostController.cs
+8. AccountController.cs (built-in Identity)
+
 Main models:
 
-Farmer.cs
-Product.cs
-PurchaseRequest.cs
-ChatMessage.cs
+1. Farmer.cs
+2. Product.cs
+3. PurchaseRequest.cs
+4. Post.cs
+5. Employee.cs
+6. Application User.cs
+7. ProductFilterView.cs
+
 Database context:
 
 ApplicationDbContext.cs – connects to Agriculture Energy DB
@@ -125,7 +133,7 @@ ApplicationDbContext.cs – connects to Agriculture Energy DB
 We used Microsoft SQL Server as our backend, and named the database Agriculture Energy .
 
 Sample Data Preloaded:
-Farmers: Kate@gmail.com, RP@gmail.com
+Farmers: Kate@gmail.com, Dev@gmail.com
 Products: Organic Tomatoes, Free-Range Eggs, etc.
 Purchase Requests: Auto-generated when users request to buy a product
 No manual seeding required — sample data is automatically handled during development via test login and CRUD operations. 
