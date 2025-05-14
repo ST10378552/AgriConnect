@@ -201,7 +201,26 @@ namespace AgriEnergyConnect.Controllers
                 return View(farmer);
             }
         }
+        [Authorize]
+        public async Task<IActionResult> Profile()
+        {
+            var userEmail = User.Identity?.Name;
 
+            if (userEmail == null)
+            {
+                return Challenge(); // Redirect to login if not authenticated
+            }
+
+            var farmer = await _context.Farmers
+                .FirstOrDefaultAsync(f => f.Email.ToLower() == userEmail.ToLower());
+
+            if (farmer == null)
+            {
+                return NotFound();
+            }
+
+            return View(farmer);
+        }
         private bool FarmerExists(int id)
         {
             return _context.Farmers.Any(e => e.Id == id);
