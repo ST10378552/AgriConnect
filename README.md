@@ -127,10 +127,12 @@ Loaded dynamically via standard CRUD operations – no seeding script needed.
 
 ⚠️ Known Challenges & Fixes
 
-Issue	Solution
+* Issue	Solution * 
 
 🔒 Identity Injection	Used User.Identity.Name instead of injecting UserManager<IdentityUser>
+
 🔁 Redirect Errors	Fixed using RedirectToAction() to maintain routing structure
+
 📱 UI on Smaller Screens	Resolved with Bootstrap media queries and col-* classes
 
 🔄 UI/UX Refinements
