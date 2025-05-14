@@ -6,294 +6,217 @@
   ![C#](https://img.shields.io/badge/C%23-13.0-purple?style=for-the-badge&logo=csharp)
   ![SQL Server](https://img.shields.io/badge/SQL%20Server-2019-red?style=for-the-badge&logo=microsoftsqlserver)
   ![Bootstrap](https://img.shields.io/badge/Bootstrap-5.0-blueviolet?style=for-the-badge&logo=bootstrap)
-  
+</div> <h3 align="center">Sustainable Agriculture Meets Green Energy</h3> <p align="center">A modern ASP.NET Core MVC platform connecting farmers with renewable energy solutions and peer-to-peer product purchasing.</p>
 
-</div> <h3 align="center">Sustainable Agriculture Meets Green Energy</h3> <p align="center">A modern platform connecting farmers with renewable energy solutions and peer-to-peer product purchasing.</p>
 🧾 Project Overview
+Agri-Energy Connect is a full-stack web application designed to empower farmers by:
 
+Enabling eco-friendly trade
 
- AgriEnergyConnect is a web application designed to empower farmers by enabling them to manage agricultural products, connect with others, and purchase sustainable goods via a secure and intuitive interface.
+Promoting clean energy education
 
-👨‍🌾 Farmer Capabilities:
+Providing a secure, role-based platform for collaboration
 
-1. Register and manage profiles
+🔧 Built with ASP.NET Core MVC, EF Core, and SQL Server, it supports scalable architecture and robust backend operations.
 
-2. Add/edit/delete products
-
-3. Browse and purchase from others
-
-4. Approve incoming purchase requests
-
-👩‍💼 Employee Capabilities:
-
-1. Manage farmer accounts and product listings
-
-2. View analytics and system-wide data
-
-Built with ASP.NET Core MVC, Entity Framework Core, and SQL Server, this platform ensures scalability and robust backend operations.
-
-🚀 Key Features
-
-✅ Farmer Registration & Profile Management
-
-✅ Product Listing & CRUD Operations
-
-✅ Purchase Request Flow (Send & Approve)
-
-✅ Role-Based Authentication with ASP.NET Identity
-
-✅ Responsive UI with Bootstrap 5
-
-✅ Educational Resources on Green Energy
-
-✅ Interactive Forum / Chat System
-
-✅ Custom Styling (Font Awesome + Google Fonts)
-
-✅ Fully Integrated SQL Server DB
-
-👥 User Roles
-
+👥 User Roles & Capabilities
 🧑‍🌾 Farmer
+📝 Register and manage personal profile
 
-1. Create/update profile
+📦 Add/edit/delete agricultural products
 
-2. Add/edit/delete products
+🛒 Browse other listings and send purchase requests
 
-3. Browse other products
+✅ View and approve incoming purchase requests
 
-4. Request to purchase
+💬 Participate in discussion forums
 
-5. View/approve incoming purchase requests
-
-🔑 Example Farmer Login:
-
-Email: Kate@gmail.com  
-
-Password: Kate@123
+📚 Access educational green energy content
 
 👩‍💼 Employee (Administrator)
+👤 Manage farmer accounts and product listings
 
-1. Manage farmers and products
+📊 View system-wide data and analytics
 
-2. Access system-wide analytics
+📂 Moderate educational content and posts
 
-🔑 Example Employee Login:
+🔐 Login Credentials (For Testing)
+Role	Email	Password
+Farmer	Kate@gmail.com	Kate@123
+Employee	Jones@gmail.com	Jones@123
 
-Email: Jones@gmail.com  
-
-Password: Jones@123
-
-💻 Technology Stack
-
-Layer	Technologies Used
-
-- Frontend	HTML5, CSS3, JavaScript, Bootstrap 5
-- Backend	ASP.NET Core MVC, C#, Entity Framework Core
-- Database	Microsoft SQL Server (Agriculture Energy)
-- Authentication	ASP.NET Identity UI
-- Authentication	ASP.NET Identity UI
-
-
-📁 Folder Structure
-
-/Controllers
-  - FarmersController.cs
-  - ProductsController.cs
-  - PurchaseController.cs
-  - HomeController.cs
-  - EmployeesController.cs
-  - ResourcesController.cs
-  - PostController.cs
-  - AccountController.cs
-
-/Models
-  - Farmer.cs
-  - Product.cs
-  - PurchaseRequest.cs
-  - Post.cs
-  - Employee.cs
-  - ApplicationUser.cs
-  - ProductFilterView.cs
-
-/Views
-  (Razor Pages Organized by Controller)
-
-/Data
-  - ApplicationDbContext.cs
-
-/wwwroot
-  (Static assets: CSS, JS, images)
-  
-📦 Database Usage
-
-Database Name: AgricultureEnergy
-
-Preloaded Sample Data:
-
-Farmers: Kate@gmail.com, Dev@gmail.com
-
-Products: Organic Tomatoes, Free-Range Eggs
-
-Purchase Requests: Auto-generated
-
-Sample data is loaded automatically via CRUD logic (no seeding script required).
-
-🎮 Feature Demonstration
-
+🚀 Key Features
 Feature	Description
-
-✅ Registration/Login	Secure user authentication using ASP.NET Identity
-
-✅ Product Browsing	Filter products by name, email, or category
-
-✅ Purchase Requests	Farmers can request to purchase; product owners can approve via UI
-
-✅ Chat Forum	Interactive discussion forum; messages stored in the ChatMessages table
-
-✅ Educational Resources	Access online courses, webinars, guides, and video tutorials
-
-✅ Profile Management	Farmers can update their profile via a top-right dropdown menu
-
+✅ Registration & Login	Secure role-based authentication using ASP.NET Identity
+✅ Product CRUD	Farmers can manage their own listings
+✅ Purchase Request System	Send, receive, and approve product purchase requests
+✅ Chat Forum	Community-style discussion board for farmers
+✅ Green Energy Learning Hub	Access to curated educational resources (courses, webinars, guides)
+✅ Responsive UI Design	Built with Bootstrap 5 and mobile-friendly grid layout
+✅ Profile Management	Users can update their own information with validation
+✅ Integrated SQL Server DB	Automatic CRUD-based sample data generation without manual seeding
 
 🎨 UI Design Highlights
+🟩 Card-Based Layout with d-flex and flex-wrap for responsiveness
 
-- Consistent card-based layout with responsive Bootstrap grid (col-md-*, d-flex, flex-wrap)
+🌀 Hover Effects to improve user interaction feedback
 
-- Hover animations for interactivity
+✅ Green Theme to reflect eco/sustainability branding
 
-- Green-themed UI for eco/success actions
+📝 Clear Form Validations using Bootstrap and Razor Tag Helpers
 
-- Clear validation feedback on forms
+💎 Modern Typography: Segoe UI + Poppins
 
-- Typography using Segoe UI and Poppins
+🔧 Icon Fixes: Resolved with updated Font Awesome CDN
 
-- Fixed broken icons by correcting Font Awesome CDN URL:
+html
 
-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+📁 Folder Structure
+bash
 
-⚠️ Challenges and Changes
+AgriConnect/
+│
+├── Controllers/              # Route and action logic
+│   ├── FarmersController.cs
+│   ├── ProductsController.cs
+│   ├── PurchaseController.cs
+│   ├── EmployeesController.cs
+│   ├── PostController.cs
+│   └── AccountController.cs
+│
+├── Models/                   # Domain entities
+│   ├── Farmer.cs
+│   ├── Product.cs
+│   ├── PurchaseRequest.cs
+│   ├── Post.cs
+│   ├── ApplicationUser.cs
+│
+├── Views/                    # Razor pages per controller
+│
+├── Data/
+│   └── ApplicationDbContext.cs
+│
+├── wwwroot/                  # Static assets (CSS, JS, images)
+│
+└── appsettings.json          # DB connection string
+🧪 Sample Data
+Loaded dynamically via standard CRUD operations – no seeding script needed.
 
-🛠️ Technical Issues
+👩‍🌾 Farmers: Kate@gmail.com, Dev@gmail.com
 
+🛍️ Products: Organic Tomatoes, Free-Range Eggs
+
+💬 Chat Posts: Stored in ChatMessages table
+
+📄 Requests: Simulated upon product browsing/interaction
+
+⚠️ Known Challenges & Fixes
 Issue	Solution
+🔒 Identity Injection	Used User.Identity.Name instead of injecting UserManager<IdentityUser>
+🔁 Redirect Errors	Fixed using RedirectToAction() to maintain routing structure
+📱 UI on Smaller Screens	Resolved with Bootstrap media queries and col-* classes
 
-- Identity injection issue	Used User.Identity.Name instead of injecting UserManager<IdentityUser>
-- Redirection errors	Solved using RedirectToAction() to ensure proper routing
-- UI issues on smaller screens	Fixed with responsive Bootstrap classes and layouts
+🔄 UI/UX Refinements
+✅ Switched from table layout to card-based format
 
-🔄 Design Improvements
+✅ Integrated request approval buttons directly into listings
 
-- Switched from table layout to card-based UI
+✅ Added dropdown menu for authenticated user profile actions
 
-- Integrated purchase request approval directly in the UI
-
-- Created a fully functional navigation bar with icons
-
-- Improved mobile usability with responsive design
+✅ Improved layout using flexbox and Bootstrap utilities
 
 🛠️ Setup Instructions
-
 ✅ Prerequisites
+.NET 9.0 SDK
 
-1. .NET SDK 9.0+
+Visual Studio 2022
 
-2. Visual Studio 2022 or Visual Studio Code
+SQL Server Express
 
-3. SQL Server Express
-
-4. SQL Server Management Studio
+SQL Server Management Studio
 
 📥 1. Clone the Repository
-
 bash
 
 git clone https://github.com/ST10378552/AgriConnect.git
-
 cd AgriConnect
-
 🛠️ 2. Configure the Database
-
 Open SQL Server Management Studio
 
-Create a new database named: Agriculture Energy
+Create a new database:
+➤ Name: Agriculture Energy
 
-Update appsettings.json with this connection string:
+Update your appsettings.json:
 
 json
 
 "ConnectionStrings": {
   "DefaultConnection": "Server=DEVESH\\SQLEXPRESS;Database=Agriculture Energy;Trusted_Connection=True;MultipleActiveResultSets=true"
 }
-
 📦 3. Apply Migrations
-
-Using Package Manager Console in Visual Studio:
+Via Visual Studio (Package Manager Console):
 
 powershell
-
+Copy
+Edit
 Add-Migration InitialCreate
-
 Update-Database
+Or using CLI:
 
-▶️ 4. Run the Application
+bash
 
+dotnet ef migrations add InitialCreate
+dotnet ef database update
+▶️ 4. Run the App
 In Visual Studio:
 
 Open the .sln file
 
-Press F5 to build and run
+Press F5 to build and launch
 
-App will be available at: https://localhost:7029/
+App runs at: https://localhost:7029/
 
-🧪 Test the App
-
+🔍 Test the Application
 👩‍🌾 Farmer
+📨 Email: Kate@gmail.com
 
-Login: Kate@gmail.com
+🔐 Password: Kate@123
 
-Password: Kate@123
-
-Browse products: https://localhost:7029/Purchase/Browse
+📦 Browse Products: https://localhost:7029/Purchase/Browse
 
 👨‍💼 Employee
-Login: Jones@gmail.com
+📨 Email: Jones@gmail.com
 
-Password: Jones@123
+🔐 Password: Jones@123
 
-Manage farmers: https://localhost:7029/Farmers/Index
-
-Manage products: https://localhost:7029/Products/Index
+🧑‍🌾 Manage Farmers: https://localhost:7029/Farmers/Index
+📦 Manage Products: https://localhost:7029/Products/Index
 
 🧱 Development Workflow
 Controllers/: Handle routing and logic
 
-Models/: Define entities and business logic
+Models/: Define database schema and relationships
 
-Views/: Razor pages, grouped per controller
+Views/: Razor Pages (organized per controller)
 
-Data/: ApplicationDbContext for EF Core and migrations
+Data/: EF Core context and migrations
 
-wwwroot/: Static files (CSS, JS, images)
+wwwroot/: Static assets (Bootstrap, JS, CSS, Icons)
 
 ➕ Add New Features
 bash
 
-Add-Migration Best
-
-Update-Database
-
+dotnet ef migrations add NewFeatureX
+dotnet ef database update
 📄 License
-
-This project is licensed under the MIT License. See the LICENSE file for more details.
+This project is licensed under the MIT License.
+See the LICENSE file for more details.
 
 📞 Contact
-
 📧 Email: naidoodevesh32@gmail.com
 
-🐱 GitHub: ST10378552/AgriConnect
+🐙 GitHub: ST10378552/AgriConnect
 
 🙌 Thank You!
-
-Thanks for exploring Agri-Energy Connect — a platform empowering farmers through technology, clean energy, and sustainable practices. 🌿🔋
-
+Thanks for exploring Agri-Energy Connect — a mission-driven platform uniting agriculture and clean energy for a better future. 🌿🔋
