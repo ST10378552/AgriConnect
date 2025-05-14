@@ -31,16 +31,27 @@ This project was developed using ASP.NET Core MVC , with Entity Framework Core a
 
 🚀 Key Features
 ✅ Farmer Registration & Profile Management
+
 ✅ Product Listing & Management
+
 ✅ Purchase Requests (Farmers can request to buy products and owners can approve)
+
 ✅ Role-Based Authentication
+
 ✅ Responsive UI using Bootstrap 5
+
 ✅ Educational Resources on green energy
+
 ✅ Interactive Forum for farmers to communicate
+
 ✅ Clean navigation bar with icons
+
 ✅ Fully integrated database (Agriculture Energy)
+
 ✅ CRUD operations for all entities
+
 ✅ Custom styling using Font Awesome and Google Fonts
+
 👥 User Roles
 Farmer
 Farmers can:
