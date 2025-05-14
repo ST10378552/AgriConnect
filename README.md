@@ -49,43 +49,58 @@ Built with:
 | **Employee** | Jones@gmail.com   | Jones@123    
 
 
-🚀 Key Features
+## 🚀 Key Features
 
-Feature	Description
+- ✅ **Registration & Login**  
+  Secure role-based authentication using ASP.NET Identity
 
-  ✅ Registration & Login	Secure role-based authentication using ASP.NET Identity
+- ✅ **Product CRUD**  
+  Farmers can add, edit, or delete their own listings
 
-  ✅ Product CRUD	Farmers can manage their own listings
+- ✅ **Purchase Request System**  
+  Users can send, receive, and approve product purchase requests
 
-  ✅ Purchase Request System	Send, receive, and approve product purchase requests
+- ✅ **Chat Forum**  
+  Community-style discussion board for farmers
 
-  ✅ Chat Forum	Community-style discussion board for farmers
+- ✅ **Green Energy Learning Hub**  
+  Access to curated educational resources (courses, webinars, guides)
 
-  ✅ Green Energy Learning Hub	Access to curated educational resources (courses, webinars, guides)
+- ✅ **Responsive UI Design**  
+  Built with Bootstrap 5 and a mobile-friendly grid layout
 
-  ✅ Responsive UI Design	Built with Bootstrap 5 and mobile-friendly grid layout
+- ✅ **Profile Management**  
+  Users can update their own information with real-time form validation
 
-  ✅ Profile Management	Users can update their own information with validation
+- ✅ **Integrated SQL Server DB**  
+  Automatic sample data generation using CRUD operations (no manual seeding needed)
 
-  ✅ Integrated SQL Server DB	Automatic CRUD-based sample data generation without manual seeding
+---
 
-🎨 UI Design Highlights
+## 🎨 UI Design Highlights
 
-  💎 Card-Based Layout with d-flex and flex-wrap for responsiveness
+- 💎 **Card-Based Layout**  
+  Utilizes `d-flex` and `flex-wrap` for responsive product and forum display
 
-  💎 Hover Effects to improve user interaction feedback
+- 💎 **Hover Effects**  
+  Enhances user interaction and visual feedback
 
-  💎 Green Theme to reflect eco/sustainability branding
+- 💎 **Eco-Themed UI**  
+  Green color scheme to reflect the sustainability mission
 
-  💎 Clear Form Validations using Bootstrap and Razor Tag Helpers
+- 💎 **Clear Form Validations**  
+  Integrated using Bootstrap styles and Razor Tag Helpers
 
-  💎 Modern Typography: Segoe UI + Poppins
+- 💎 **Modern Typography**  
+  Font stack includes *Segoe UI* and *Poppins* for readability and aesthetics
 
-  💎 Icon Fixes: Resolved with updated Font Awesome CDN
+- 💎 **Icon Fixes**  
+  Resolved icon display issues using the updated Font Awesome CDN:
+  
+  ```html
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  ```
 
-html
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
 ## 📁 Folder Structure
 
